@@ -1,0 +1,39 @@
+{
+  "name": "legacy-archaeologist",
+  "version": "0.1.0",
+  "description": "Points at a legacy JavaScript folder and returns a static map, recorded characterization tests, a mutation score and a living SPEC.md.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.21 <25"
+  },
+  "scripts": {
+    "la": "node src/bin.ts",
+    "demo": "node scripts/demo.ts",
+    "eval:llm": "node scripts/eval-llm.ts --baseline artifacts/demo-baseline --candidate artifacts/demo",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run test:fast && npm run test:demo",
+    "test:fast": "node --import ./tests/setup/no-network.ts --test \"tests/unit/**/*.test.ts\" \"tests/e2e/**/*.test.ts\"",
+    "test:demo": "node --import ./tests/setup/no-network.ts --test tests/demo/demo.e2e.test.ts",
+    "test:unit": "node --import ./tests/setup/no-network.ts --test \"tests/unit/**/*.test.ts\"",
+    "test:e2e": "node --import ./tests/setup/no-network.ts --test \"tests/e2e/**/*.test.ts\"",
+    "test:dev": "node --import ./tests/setup/no-network.ts --test --watch \"tests/unit/**/*.test.ts\"",
+    "test:live": "node --env-file-if-exists=.env --test \"tests/live/**/*.live.ts\"",
+    "regen": "UPDATE_GOLDEN=1 node --import ./tests/setup/no-network.ts --test tests/demo/demo.e2e.test.ts",
+    "fixtures:rehash": "node scripts/rehash-fixtures.ts",
+    "check:secrets": "node scripts/check-secrets.ts",
+    "diagrams:check": "node scripts/check-diagrams.ts",
+    "setup:hooks": "git config core.hooksPath .githooks",
+    "verify": "npm run typecheck && npm test && npm run check:secrets"
+  },
+  "dependencies": {
+    "acorn": "8.19.0",
+    "acorn-walk": "8.3.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "typescript": "7.0.2"
+  }
+}

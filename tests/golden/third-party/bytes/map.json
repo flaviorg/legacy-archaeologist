@@ -1,0 +1,318 @@
+{
+  "files": [
+    {
+      "bytes": 3613,
+      "parse": "ok",
+      "path": "index.js",
+      "sha256": "893fcbbbe962dc00e40dc2e4b20e76e92d874dd257345003c6575d940e91a37f",
+      "sourceType": "script"
+    }
+  ],
+  "hotspots": [
+    {
+      "complexity": 20,
+      "functionId": "index.js#format"
+    },
+    {
+      "complexity": 6,
+      "functionId": "index.js#parse"
+    },
+    {
+      "complexity": 3,
+      "functionId": "index.js#bytes"
+    }
+  ],
+  "modules": [
+    {
+      "exports": [
+        {
+          "functionId": "index.js#bytes",
+          "kind": "function",
+          "name": "default"
+        },
+        {
+          "functionId": "index.js#format",
+          "kind": "function",
+          "name": "format"
+        },
+        {
+          "functionId": "index.js#parse",
+          "kind": "function",
+          "name": "parse"
+        }
+      ],
+      "externalSpecifiers": [],
+      "file": "index.js",
+      "functions": [
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "parse",
+              "dynamic": false,
+              "line": 56,
+              "resolved": "index.js#parse"
+            },
+            {
+              "callee": "format",
+              "dynamic": false,
+              "line": 60,
+              "resolved": "index.js#format"
+            }
+          ],
+          "complexity": 3,
+          "exportName": "default",
+          "exported": true,
+          "id": "index.js#bytes",
+          "loc": {
+            "endLine": 64,
+            "startLine": 54
+          },
+          "magicNumbers": [],
+          "name": "bytes",
+          "params": [
+            "value",
+            "options"
+          ],
+          "range": [
+            941,
+            1130
+          ],
+          "readsModuleState": [],
+          "sideEffects": [],
+          "sourceBytes": 189,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "Number.isFinite",
+              "dynamic": false,
+              "line": 85,
+              "resolved": null
+            },
+            {
+              "callee": "Math.abs",
+              "dynamic": false,
+              "line": 89,
+              "resolved": null
+            },
+            {
+              "callee": "Boolean",
+              "dynamic": false,
+              "line": 93,
+              "resolved": null
+            },
+            {
+              "callee": "unit.toLowerCase",
+              "dynamic": false,
+              "line": 96,
+              "resolved": null
+            },
+            {
+              "callee": "unit.toLowerCase",
+              "dynamic": false,
+              "line": 112,
+              "resolved": null
+            },
+            {
+              "callee": "val.toFixed",
+              "dynamic": false,
+              "line": 113,
+              "resolved": null
+            },
+            {
+              "callee": "str.replace",
+              "dynamic": false,
+              "line": 116,
+              "resolved": null
+            },
+            {
+              "callee": "str.split",
+              "dynamic": false,
+              "line": 120,
+              "resolved": null
+            },
+            {
+              "callee": "<expression>.map",
+              "dynamic": false,
+              "line": 120,
+              "resolved": null
+            },
+            {
+              "callee": "<expression>.join",
+              "dynamic": false,
+              "line": 124,
+              "resolved": null
+            },
+            {
+              "callee": "s.replace",
+              "dynamic": false,
+              "line": 122,
+              "resolved": null
+            }
+          ],
+          "complexity": 20,
+          "exportName": "format",
+          "exported": true,
+          "id": "index.js#format",
+          "loc": {
+            "endLine": 128,
+            "startLine": 84
+          },
+          "magicNumbers": [
+            {
+              "column": 98,
+              "line": 92,
+              "value": 2
+            }
+          ],
+          "name": "format",
+          "params": [
+            "value",
+            "options"
+          ],
+          "range": [
+            1598,
+            2797
+          ],
+          "readsModuleState": [
+            "formatDecimalsRegExp",
+            "formatThousandsRegExp",
+            "map"
+          ],
+          "sideEffects": [],
+          "sourceBytes": 1199,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "isNaN",
+              "dynamic": false,
+              "line": 142,
+              "resolved": null
+            },
+            {
+              "callee": "parseRegExp.exec",
+              "dynamic": false,
+              "line": 151,
+              "resolved": null
+            },
+            {
+              "callee": "parseInt",
+              "dynamic": false,
+              "line": 157,
+              "resolved": null
+            },
+            {
+              "callee": "parseFloat",
+              "dynamic": false,
+              "line": 161,
+              "resolved": null
+            },
+            {
+              "callee": "results[<computed>].toLowerCase",
+              "dynamic": false,
+              "line": 162,
+              "resolved": null
+            },
+            {
+              "callee": "isNaN",
+              "dynamic": false,
+              "line": 165,
+              "resolved": null
+            },
+            {
+              "callee": "Math.floor",
+              "dynamic": false,
+              "line": 169,
+              "resolved": null
+            }
+          ],
+          "complexity": 6,
+          "exportName": "parse",
+          "exported": true,
+          "id": "index.js#parse",
+          "loc": {
+            "endLine": 170,
+            "startLine": 141
+          },
+          "magicNumbers": [
+            {
+              "column": 32,
+              "line": 157,
+              "value": 10
+            },
+            {
+              "column": 20,
+              "line": 162,
+              "value": 4
+            }
+          ],
+          "name": "parse",
+          "params": [
+            "val"
+          ],
+          "range": [
+            2997,
+            3612
+          ],
+          "readsModuleState": [
+            "map",
+            "parseRegExp"
+          ],
+          "sideEffects": [],
+          "sourceBytes": 615,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        }
+      ],
+      "kind": "cjs",
+      "moduleState": []
+    }
+  ],
+  "schemaVersion": 1,
+  "stats": {
+    "exportedFunctions": 3,
+    "files": 1,
+    "functions": 4,
+    "parsedFiles": 1,
+    "sideEffects": {
+      "Date": 0,
+      "Intl": 0,
+      "Math.random": 0,
+      "child_process": 0,
+      "console": 0,
+      "crypto": 0,
+      "dns": 0,
+      "fs": 0,
+      "global-write": 0,
+      "http": 0,
+      "module-state-write": 0,
+      "net": 0,
+      "performance.now": 0,
+      "process.env": 0,
+      "process.hrtime": 0,
+      "timers": 0
+    },
+    "unresolvedCalls": 0,
+    "unresolvedIdentifiers": 0
+  },
+  "targetDir": "fixtures/third-party/bytes",
+  "targetSha": "sha256:a7944d9db89af14a3e80716925b7361732c555ccf649aae26f526bd9f6e5c2fd",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  }
+}

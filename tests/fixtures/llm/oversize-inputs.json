@@ -1,0 +1,80 @@
+{
+  "promptHashes": {
+    "hypothesize.v1": "sha256:ab63334dd6a9dcbd3f49f602112313751b935018004e812c7fa4c589c0f43850",
+    "survivor-inputs.v1": "sha256:8bfb4907865f7715c240c185267bd837549a6a4c32d9ceba312fb016028dfc25"
+  },
+  "scenario": "oversize-inputs",
+  "schemaVersion": 1,
+  "targetDir": "tests/fixtures/targets/threshold",
+  "targetSha": "sha256:96574ce153e317b4346c0183dacfff238b8753d16d574c4180034250e582d8c0",
+  "turns": [
+    {
+      "error": {
+        "kind": "invalid_output",
+        "raw": "{\"rules\":[{\"key\":\"rule-01\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-02\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-03\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-04\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-05\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-06\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-07\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-08\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-09\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-10\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-11\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-12\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-13\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-14\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-15\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-16\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-17\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-18\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-19\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-20\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-21\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-22\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-23\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-24\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-25\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-26\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-27\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-28\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-29\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]},{\"key\":\"rule-30\",\"statement\":\"A rule stated at length for the oversize test.\",\"probes\":[]}],\"partitions\":[{\"label\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"steps\":[{\"args\":[1]}]},{\"label\":\"a wide object\",\"steps\":[{\"args\":[{\"k0\":0,\"k1\":1,\"k2\":2,\"k3\":3,\"k4\":4,\"k5\":5,\"k6\":6,\"k7\":7,\"k8\":8,\"k9\":9,\"k10\":10,\"k11\":11,\"k12\":12,\"k13\":13,\"k14\":14,\"k15\":15,\"k16\":16,\"k17\":17,\"k18\":18,\"k19\":19,\"k20\":20,\"k21\":21,\"k22\":22,\"k23\":23,\"k24\":24,\"k25\":25,\"k26\":26,\"k27\":27,\"k28\":28,\"k29\":29,\"k30\":30,\"k31\":31,\"k32\":32,\"k33\":33,\"k34\":34,\"k35\":35,\"k36\":36,\"k37\":37,\"k38\":38,\"k39\":39,\"k40\":40,\"k41\":41,\"k42\":42,\"k43\":43,\"k44\":44,\"k45\":45,\"k46\":46,\"k47\":47,\"k48\":48,\"k49\":49,\"k50\":50,\"k51\":51,\"k52\":52,\"k53\":53,\"k54\":54,\"k55\":55,\"k56\":56,\"k57\":57,\"k58\":58,\"k59\":59,\"k60\":60,\"k61\":61,\"k62\":62,\"k63\":63,\"k64\":64,\"k65\":65,\"k66\":66,\"k67\":67,\"k68\":68,\"k69\":69,\"k70\":70,\"k71\":71,\"k72\":72,\"k73\":73,\"k74\":74,\"k75\":75,\"k76\":76,\"k77\":77,\"k78\":78,\"k79\":79,\"k80\":80,\"k81\":81,\"k82\":82,\"k83\":83,\"k84\":84,\"k85\":85,\"k86\":86,\"k87\":87,\"k88\":88,\"k89\":89,\"k90\":90,\"k91\":91,\"k92\":92,\"k93\":93,\"k94\":94,\"k95\":95,\"k96\":96,\"k97\":97,\"k98\":98,\"k99\":99,\"k100\":100}]}]},{\"label\":\"a bogus tag\",\"steps\":[{\"args\":[{\"$t\":\"bogus\"}]}]}]}"
+      },
+      "id": "hyp-fee-oversize",
+      "prompt": "hypothesize.v1",
+      "when": {
+        "functionId": "index.js#fee"
+      }
+    },
+    {
+      "id": "hyp-fee-repair",
+      "output": {
+        "partitions": [
+          {
+            "label": "well above the threshold",
+            "steps": [
+              {
+                "args": [
+                  20
+                ]
+              }
+            ]
+          },
+          {
+            "label": "three arguments for one parameter",
+            "steps": [
+              {
+                "args": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "label": "nested six deep",
+            "steps": [
+              {
+                "args": [
+                  [
+                    [
+                      [
+                        [
+                          [
+                            [
+                              1
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "prompt": "hypothesize.v1",
+      "when": {
+        "functionId": "index.js#fee",
+        "repair": true
+      }
+    }
+  ]
+}

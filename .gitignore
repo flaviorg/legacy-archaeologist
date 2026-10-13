@@ -1,0 +1,8 @@
+node_modules/
+# The requires-dep test target ships a tiny npm-style dependency (EXTERNAL_DEPENDENCY tests).
+!tests/fixtures/targets/requires-dep/node_modules/
+.env
+artifacts/
+coverage/
+/private
+.DS_Store

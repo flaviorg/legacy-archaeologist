@@ -1,0 +1,609 @@
+{
+  "files": [
+    {
+      "bytes": 3987,
+      "parse": "ok",
+      "path": "billing.js",
+      "sha256": "f72d1cd68fa8f15fb202e71b54e3723cd5bcee643fc65c7d5e416f78c37ddda8",
+      "sourceType": "script"
+    }
+  ],
+  "hotspots": [
+    {
+      "complexity": 5,
+      "functionId": "billing.js#calculateInvoice"
+    },
+    {
+      "complexity": 5,
+      "functionId": "billing.js#prorate"
+    },
+    {
+      "complexity": 4,
+      "functionId": "billing.js#applyDiscount"
+    },
+    {
+      "complexity": 2,
+      "functionId": "billing.js#lateFee"
+    },
+    {
+      "complexity": 2,
+      "functionId": "billing.js#nextInvoiceNumber"
+    }
+  ],
+  "modules": [
+    {
+      "exports": [
+        {
+          "functionId": "billing.js#roundMoney",
+          "kind": "function",
+          "name": "roundMoney"
+        },
+        {
+          "functionId": "billing.js#applyDiscount",
+          "kind": "function",
+          "name": "applyDiscount"
+        },
+        {
+          "functionId": "billing.js#prorate",
+          "kind": "function",
+          "name": "prorate"
+        },
+        {
+          "functionId": "billing.js#lateFee",
+          "kind": "function",
+          "name": "lateFee"
+        },
+        {
+          "functionId": "billing.js#nextInvoiceNumber",
+          "kind": "function",
+          "name": "nextInvoiceNumber"
+        },
+        {
+          "functionId": "billing.js#calculateInvoice",
+          "kind": "function",
+          "name": "calculateInvoice"
+        },
+        {
+          "functionId": "billing.js#formatMoney",
+          "kind": "function",
+          "name": "formatMoney"
+        }
+      ],
+      "externalSpecifiers": [],
+      "file": "billing.js",
+      "functions": [
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "Math.floor",
+              "dynamic": false,
+              "line": 20,
+              "resolved": null
+            }
+          ],
+          "complexity": 1,
+          "exportName": "roundMoney",
+          "exported": true,
+          "id": "billing.js#roundMoney",
+          "loc": {
+            "endLine": 21,
+            "startLine": 19
+          },
+          "magicNumbers": [
+            {
+              "column": 25,
+              "line": 20,
+              "value": 100
+            },
+            {
+              "column": 31,
+              "line": 20,
+              "value": 0.5
+            },
+            {
+              "column": 38,
+              "line": 20,
+              "value": 100
+            }
+          ],
+          "name": "roundMoney",
+          "params": [
+            "n"
+          ],
+          "range": [
+            420,
+            488
+          ],
+          "readsModuleState": [],
+          "sideEffects": [],
+          "sourceBytes": 68,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "code.toString",
+              "dynamic": false,
+              "line": 36,
+              "resolved": null
+            }
+          ],
+          "complexity": 4,
+          "exportName": "applyDiscount",
+          "exported": true,
+          "id": "billing.js#applyDiscount",
+          "loc": {
+            "endLine": 47,
+            "startLine": 35
+          },
+          "magicNumbers": [
+            {
+              "column": 20,
+              "line": 41,
+              "value": 100
+            }
+          ],
+          "name": "applyDiscount",
+          "params": [
+            "subtotal",
+            "code"
+          ],
+          "range": [
+            775,
+            1070
+          ],
+          "readsModuleState": [
+            "DISCOUNTS"
+          ],
+          "sideEffects": [],
+          "sourceBytes": 295,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "startDate.getDate",
+              "dynamic": false,
+              "line": 59,
+              "resolved": null
+            },
+            {
+              "callee": "<expression>.getDate",
+              "dynamic": false,
+              "line": 63,
+              "resolved": null
+            },
+            {
+              "callee": "startDate.getFullYear",
+              "dynamic": false,
+              "line": 63,
+              "resolved": null
+            },
+            {
+              "callee": "startDate.getMonth",
+              "dynamic": false,
+              "line": 63,
+              "resolved": null
+            },
+            {
+              "callee": "Math.floor",
+              "dynamic": false,
+              "line": 65,
+              "resolved": null
+            },
+            {
+              "callee": "end.getTime",
+              "dynamic": false,
+              "line": 65,
+              "resolved": null
+            },
+            {
+              "callee": "startDate.getTime",
+              "dynamic": false,
+              "line": 65,
+              "resolved": null
+            },
+            {
+              "callee": "Math.round",
+              "dynamic": false,
+              "line": 72,
+              "resolved": null
+            }
+          ],
+          "complexity": 5,
+          "exportName": "prorate",
+          "exported": true,
+          "id": "billing.js#prorate",
+          "loc": {
+            "endLine": 73,
+            "startLine": 57
+          },
+          "magicNumbers": [
+            {
+              "column": 20,
+              "line": 60,
+              "value": 31
+            },
+            {
+              "column": 16,
+              "line": 61,
+              "value": 30
+            },
+            {
+              "column": 65,
+              "line": 65,
+              "value": 86400000
+            }
+          ],
+          "name": "prorate",
+          "params": [
+            "amountCents",
+            "startDate",
+            "endDate"
+          ],
+          "range": [
+            1322,
+            1858
+          ],
+          "readsModuleState": [],
+          "sideEffects": [
+            {
+              "detail": "new Date",
+              "kind": "Date",
+              "line": 58
+            },
+            {
+              "detail": "new Date",
+              "kind": "Date",
+              "line": 63
+            }
+          ],
+          "sourceBytes": 536,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "paidDate.getTime",
+              "dynamic": false,
+              "line": 83,
+              "resolved": null
+            },
+            {
+              "callee": "dueDate.getTime",
+              "dynamic": false,
+              "line": 83,
+              "resolved": null
+            },
+            {
+              "callee": "Math.ceil",
+              "dynamic": false,
+              "line": 84,
+              "resolved": null
+            }
+          ],
+          "complexity": 2,
+          "exportName": "lateFee",
+          "exported": true,
+          "id": "billing.js#lateFee",
+          "loc": {
+            "endLine": 89,
+            "startLine": 82
+          },
+          "magicNumbers": [
+            {
+              "column": 57,
+              "line": 83,
+              "value": 86400000
+            },
+            {
+              "column": 32,
+              "line": 84,
+              "value": 7
+            },
+            {
+              "column": 15,
+              "line": 85,
+              "value": 3
+            },
+            {
+              "column": 13,
+              "line": 86,
+              "value": 3
+            },
+            {
+              "column": 18,
+              "line": 88,
+              "value": 0.015
+            }
+          ],
+          "name": "lateFee",
+          "params": [
+            "dueDate",
+            "paidDate",
+            "amount"
+          ],
+          "range": [
+            2033,
+            2252
+          ],
+          "readsModuleState": [],
+          "sideEffects": [],
+          "sourceBytes": 219,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "<expression>.getFullYear",
+              "dynamic": false,
+              "line": 99,
+              "resolved": null
+            }
+          ],
+          "complexity": 2,
+          "exportName": "nextInvoiceNumber",
+          "exported": true,
+          "id": "billing.js#nextInvoiceNumber",
+          "loc": {
+            "endLine": 101,
+            "startLine": 96
+          },
+          "magicNumbers": [],
+          "name": "nextInvoiceNumber",
+          "params": [
+            "prefix"
+          ],
+          "range": [
+            2362,
+            2523
+          ],
+          "readsModuleState": [
+            "_seq"
+          ],
+          "sideEffects": [
+            {
+              "detail": "_seq",
+              "kind": "module-state-write",
+              "line": 98
+            },
+            {
+              "detail": "new Date",
+              "kind": "Date",
+              "line": 99
+            }
+          ],
+          "sourceBytes": 161,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": [
+            "_seq"
+          ]
+        },
+        {
+          "callbackParam": "cb",
+          "calls": [
+            {
+              "callee": "cb",
+              "dynamic": false,
+              "line": 111,
+              "resolved": null
+            },
+            {
+              "callee": "applyDiscount",
+              "dynamic": false,
+              "line": 118,
+              "resolved": "billing.js#applyDiscount"
+            },
+            {
+              "callee": "roundMoney",
+              "dynamic": false,
+              "line": 120,
+              "resolved": "billing.js#roundMoney"
+            },
+            {
+              "callee": "nextInvoiceNumber",
+              "dynamic": false,
+              "line": 122,
+              "resolved": "billing.js#nextInvoiceNumber"
+            },
+            {
+              "callee": "roundMoney",
+              "dynamic": false,
+              "line": 124,
+              "resolved": "billing.js#roundMoney"
+            },
+            {
+              "callee": "roundMoney",
+              "dynamic": false,
+              "line": 125,
+              "resolved": "billing.js#roundMoney"
+            },
+            {
+              "callee": "roundMoney",
+              "dynamic": false,
+              "line": 127,
+              "resolved": "billing.js#roundMoney"
+            },
+            {
+              "callee": "Math.floor",
+              "dynamic": false,
+              "line": 128,
+              "resolved": null
+            },
+            {
+              "callee": "Math.random",
+              "dynamic": false,
+              "line": 128,
+              "resolved": null
+            },
+            {
+              "callee": "cb",
+              "dynamic": false,
+              "line": 131,
+              "resolved": null
+            }
+          ],
+          "complexity": 5,
+          "exportName": "calculateInvoice",
+          "exported": true,
+          "id": "billing.js#calculateInvoice",
+          "loc": {
+            "endLine": 132,
+            "startLine": 109
+          },
+          "magicNumbers": [
+            {
+              "column": 43,
+              "line": 128,
+              "value": 1000000
+            }
+          ],
+          "name": "calculateInvoice",
+          "params": [
+            "customer",
+            "lines",
+            "cb"
+          ],
+          "range": [
+            2750,
+            3504
+          ],
+          "readsModuleState": [
+            "TAX_RATE"
+          ],
+          "sideEffects": [
+            {
+              "detail": "Math.random",
+              "kind": "Math.random",
+              "line": 128
+            },
+            {
+              "detail": "LAST_INVOICE",
+              "kind": "global-write",
+              "line": 130
+            }
+          ],
+          "sourceBytes": 754,
+          "style": "callback",
+          "tooLargeForLlm": false,
+          "writesGlobals": [
+            "LAST_INVOICE"
+          ],
+          "writesModuleState": []
+        },
+        {
+          "callbackParam": null,
+          "calls": [
+            {
+              "callee": "<expression>.toFixed",
+              "dynamic": false,
+              "line": 140,
+              "resolved": null
+            },
+            {
+              "callee": "text.replace",
+              "dynamic": false,
+              "line": 141,
+              "resolved": null
+            }
+          ],
+          "complexity": 1,
+          "exportName": "formatMoney",
+          "exported": true,
+          "id": "billing.js#formatMoney",
+          "loc": {
+            "endLine": 142,
+            "startLine": 139
+          },
+          "magicNumbers": [
+            {
+              "column": 23,
+              "line": 140,
+              "value": 100
+            },
+            {
+              "column": 36,
+              "line": 140,
+              "value": 2
+            }
+          ],
+          "name": "formatMoney",
+          "params": [
+            "cents"
+          ],
+          "range": [
+            3637,
+            3760
+          ],
+          "readsModuleState": [],
+          "sideEffects": [],
+          "sourceBytes": 123,
+          "style": "sync",
+          "tooLargeForLlm": false,
+          "writesGlobals": [],
+          "writesModuleState": []
+        }
+      ],
+      "kind": "cjs",
+      "moduleState": [
+        {
+          "declaration": "var",
+          "line": 9,
+          "name": "_seq"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "stats": {
+    "exportedFunctions": 7,
+    "files": 1,
+    "functions": 7,
+    "parsedFiles": 1,
+    "sideEffects": {
+      "Date": 3,
+      "Intl": 0,
+      "Math.random": 1,
+      "child_process": 0,
+      "console": 0,
+      "crypto": 0,
+      "dns": 0,
+      "fs": 0,
+      "global-write": 1,
+      "http": 0,
+      "module-state-write": 1,
+      "net": 0,
+      "performance.now": 0,
+      "process.env": 0,
+      "process.hrtime": 0,
+      "timers": 0
+    },
+    "unresolvedCalls": 0,
+    "unresolvedIdentifiers": 0
+  },
+  "targetDir": "fixtures/legacy-billing",
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  }
+}

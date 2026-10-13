@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "failed": 5,
+      "failures": [
+        {
+          "caseId": "billing.js#roundMoney#c01",
+          "message": "expected returned -0.12   actual returned -0.13",
+          "name": "[billing.js#roundMoney#c01] probe BR-01: negative eighth of a cent"
+        },
+        {
+          "caseId": "billing.js#roundMoney#c07",
+          "message": "expected returned -0.13   actual returned -0.14",
+          "name": "[billing.js#roundMoney#c07] boundary of billing.js#roundMoney#c01: negative eighth of a cent / arg 1 -0.01"
+        },
+        {
+          "caseId": "billing.js#roundMoney#c08",
+          "message": "expected returned -0.11   actual returned -0.12",
+          "name": "[billing.js#roundMoney#c08] boundary of billing.js#roundMoney#c01: negative eighth of a cent / arg 1 +0.01"
+        },
+        {
+          "caseId": "billing.js#applyDiscount#c01",
+          "message": "expected returned 100   actual returned 90",
+          "name": "[billing.js#applyDiscount#c01] probe BR-01: subtotal exactly 100.00 with VIP"
+        },
+        {
+          "caseId": "billing.js#calculateInvoice#c02",
+          "message": "expected callback [null, {\"number\": \"INV-2023-1001\", \"customer\": \"Cy\", \"subtotal\": 100, \"discount\": 0, \"tax\": 7.25, \"total\": 107.25, \"ref\": \"R601103\"}]   actual callback [null, {\"number\": \"INV-2023-1001\", \"customer\": \"Cy\", \"subtotal\": 100, \"discount\": 10, \"tax\": 6.53, \"total\": 96.53, \"ref\": \"R601103\"}]",
+          "name": "[billing.js#calculateInvoice#c02] probe BR-02: VIP customer at exactly 100.00 of lines"
+        }
+      ],
+      "file": "artifacts/demo/tests/billing.characterization.test.mts",
+      "passed": 91,
+      "tests": 96,
+      "timedOut": false
+    }
+  ],
+  "target": "fixtures/refactors/broken"
+}

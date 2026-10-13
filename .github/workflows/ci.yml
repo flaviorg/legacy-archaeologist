@@ -1,0 +1,38 @@
+# CI for legacy-archaeologist (spec CS-8): typecheck, the full test suite and check:secrets with no secret and no
+# network after npm ci (the fake and none providers need neither), then the demo as its own step with a 3-minute bound.
+# Action majors: v7, as in the author's incident-copilot CI, where they were checked against the official releases on
+# 2026-10-04 (checkout v7.0.1, setup-node v7.0.0); not re-checked for this repository (no network while it was built).
+name: CI
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run check:secrets
+
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Demo (bound of spec 6.1 on CI)
+        run: npm run demo
+        timeout-minutes: 3

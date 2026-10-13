@@ -1,0 +1,49 @@
+
+legacy-archaeologist 0.1.0 · demo · no network · clock 2023-11-14T22:13:20.000Z · seed 42
+target: fixtures/legacy-billing (1 file, 152 lines, sha256 688d8c7a321a)
+
+── pass A · provider: none (no LLM; inputs derived from the static map) ──
+[1/6] static map        7 exported functions · 1 callback-style · hotspots: calculateInvoice (5), prorate (5)
+                        side effects: Date ×3, Math.random ×1, global-write ×1, module-state-write ×1 · unresolved calls: 0
+[2/6] inputs            baseline value table · 0 rules · 332 derived inputs · 116 rejected (CAP_CASES ×94, DUPLICATE ×22)
+[3/6] recording         240 cases · run twice · 240 stable · 0 unstable · 0 not characterized
+[4/6] mutation          133 mutants (AOR 30, ROR 10, LOR 3, NEG 9, NUM 67, BLOCK 14) · 0 invalid
+                        round 0: killed 42 · timeout 0 · survived 91 · no-coverage 0 → mutation score 31.6%
+[5/6] tests + SPEC.md   240 tests → artifacts/demo-baseline/tests/billing.characterization.test.mts · SPEC.md 199 lines
+[6/6] rules             none (no LLM)
+
+── pass B · provider: fake (scripted) ──
+[1/6] static map        same map (sha256 688d8c7a321a)
+[2/6] hypotheses (LLM)  7 calls · 17 rules · 35 proposed inputs · 0 rejected
+[3/6] recording         96 cases · run twice · 96 stable · 0 unstable · 0 not characterized
+                        child: --permission, net guard, fd 3 + nonce, watchdog 3.0 s per case · 0 timeouts
+[4/6] mutation          133 mutants · 0 invalid · same 133 valid mutants as pass A
+                        round 0: killed 109 · timeout 0 · survived 24 · no-coverage 0 → mutation score 82.0%
+                        round 1 (LLM, scripted): 10 survivors asked · 13 inputs proposed · 11 accepted · recorded on the original code
+                                                 11 more killed → 90.2% (13 survivors left, 1 flagged "likely equivalent" by the LLM, advisory)
+[5/6] tests + SPEC.md   96 tests → artifacts/demo/tests/billing.characterization.test.mts · SPEC.md 174 lines
+[6/6] rules             13 consistent · 3 contradicted · 1 unverified
+                        SB-01 roundMoney(-0.125): predicted -0.13, observed -0.12 (billing.js:19-21)
+                        SB-02 applyDiscount(100, "VIP"): predicted 90, observed 100 (billing.js:35-47)
+                        SB-03 lateFee(Date(2023-11-24T22:13:20.000Z), Date(2023-11-14T22:13:20.000Z), 300): predicted 0, observed -4.5 (billing.js:82-89)
+
+verify --against fixtures/refactors/modern   96 tests · 96 passed · 0 failed   ✔ behavior preserved on recorded cases
+verify --against fixtures/refactors/broken   96 tests · 91 passed · 5 failed   ✔ caught (expected)
+  [billing.js#roundMoney#c01]       probe BR-01 … expected returned -0.12, actual returned -0.13
+  [billing.js#roundMoney#c07]       boundary of billing.js#roundMoney#c01 … expected returned -0.13, actual returned -0.14
+  [billing.js#roundMoney#c08]       boundary of billing.js#roundMoney#c01 … expected returned -0.11, actual returned -0.12
+  [billing.js#applyDiscount#c01]    probe BR-01 … expected returned 100, actual returned 90
+  [billing.js#calculateInvoice#c02] probe BR-02 … expected callback [null, {"number": "INV-2023-1001", "customer": "Cy", "subtotal": 100, "discount": 0, "tax": 7.25, "total": 107.25, "ref": "R601103"}], actual callback [null, {"number": "INV-2023-1001", "customer": "Cy", "subtotal": 100, "discount": 10, "tax": 6.53, "total": 96.53, "ref": "R601103"}]
+
+── pass C · fixtures/third-party/bytes (bytes@3.1.2, MIT, not written by the author) · provider: none (no LLM) ──
+[1/6] static map        3 exported functions · 0 callback-style · hotspots: format (20), parse (6)
+                        side effects: none · unresolved calls: 0
+[2/6] inputs            baseline value table · 0 rules · 100 derived inputs · 9 rejected (DUPLICATE ×9)
+[3/6] recording         111 cases · run twice · 111 stable · 0 unstable · 0 not characterized
+[4/6] mutation          74 mutants (AOR 4, ROR 11, LOR 10, NEG 17, NUM 13, BLOCK 19) · 0 invalid
+                        round 0: killed 36 · timeout 0 · survived 38 · no-coverage 0 → mutation score 48.6%
+[5/6] tests + SPEC.md   111 tests → artifacts/demo-third-party/tests/index.characterization.test.mts · SPEC.md 107 lines
+[6/6] rules             none (no LLM)
+
+mutation score · none 31.6% · fake (scripted: author-written survivor inputs) 90.2% · same formula, same 133 mutants, 240 vs 96 recorded cases
+artifacts: artifacts/demo-baseline/ · artifacts/demo/{map,hypotheses,records,mutation,report}.json · SPEC.md · tests/ · llm-trace.jsonl · artifacts/demo-third-party/

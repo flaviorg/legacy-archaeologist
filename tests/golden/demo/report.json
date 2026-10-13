@@ -1,0 +1,862 @@
+{
+  "loadErrors": [],
+  "model": "fake",
+  "mutation": {
+    "detected": 120,
+    "mutationScore": 90.2,
+    "valid": 133
+  },
+  "notCharacterized": [],
+  "provider": "fake",
+  "rules": [
+    {
+      "functionId": "billing.js#roundMoney",
+      "key": "half-cent-away-from-zero",
+      "probes": [
+        {
+          "args": [
+            [
+              -0.125
+            ]
+          ],
+          "caseId": "billing.js#roundMoney#c01",
+          "label": "negative eighth of a cent",
+          "matched": false,
+          "observed": {
+            "kind": "returned",
+            "value": -0.12
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": -0.13
+          }
+        },
+        {
+          "args": [
+            [
+              0.125
+            ]
+          ],
+          "caseId": "billing.js#roundMoney#c02",
+          "label": "positive eighth of a cent",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 0.13
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 0.13
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        100,
+        0.5
+      ],
+      "ruleId": "BR-01",
+      "statement": "Half cents are rounded away from zero, so -0.125 becomes -0.13.",
+      "status": "contradicted"
+    },
+    {
+      "functionId": "billing.js#roundMoney",
+      "key": "rounds-to-cents",
+      "probes": [
+        {
+          "args": [
+            [
+              1.234
+            ]
+          ],
+          "caseId": "billing.js#roundMoney#c03",
+          "label": "three decimals",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 1.23
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 1.23
+          }
+        },
+        {
+          "args": [
+            [
+              10
+            ]
+          ],
+          "caseId": "billing.js#roundMoney#c04",
+          "label": "whole amount unchanged",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 10
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 10
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        100
+      ],
+      "ruleId": "BR-02",
+      "statement": "Any amount is rounded to two decimal places.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "key": "vip-threshold",
+      "probes": [
+        {
+          "args": [
+            [
+              100,
+              "VIP"
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c01",
+          "label": "subtotal exactly 100.00 with VIP",
+          "matched": false,
+          "observed": {
+            "kind": "returned",
+            "value": 100
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 90
+          }
+        },
+        {
+          "args": [
+            [
+              150,
+              "VIP"
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c02",
+          "label": "VIP well above the threshold",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 135
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 135
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        100,
+        0.1
+      ],
+      "ruleId": "BR-01",
+      "statement": "VIP customers get 10% off orders of 100.00 or more.",
+      "status": "contradicted"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "key": "staff-discount",
+      "probes": [
+        {
+          "args": [
+            [
+              80,
+              "STAFF"
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c03",
+          "label": "staff on 80.00",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 60
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 60
+          }
+        },
+        {
+          "args": [
+            [
+              0.04,
+              "STAFF"
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c04",
+          "label": "staff on a tiny amount",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 0.03
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 0.03
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        0.25
+      ],
+      "ruleId": "BR-02",
+      "statement": "Staff always get 25% off, whatever the subtotal.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "key": "unknown-code-unchanged",
+      "probes": [
+        {
+          "args": [
+            [
+              50,
+              "NOPE"
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c05",
+          "label": "unknown code",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 50
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 50
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [],
+      "ruleId": "BR-03",
+      "statement": "An unknown discount code leaves the subtotal unchanged.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "key": "missing-code-throws",
+      "probes": [
+        {
+          "args": [
+            [
+              100,
+              null
+            ]
+          ],
+          "caseId": "billing.js#applyDiscount#c06",
+          "label": "null code",
+          "matched": true,
+          "observed": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'toString')"
+            }
+          },
+          "prediction": {
+            "kind": "throws",
+            "name": "TypeError"
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [],
+      "ruleId": "BR-04",
+      "statement": "A missing (null) discount code throws a TypeError.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "key": "month-end-start",
+      "probes": [
+        {
+          "args": [
+            [
+              3100,
+              {
+                "$t": "Date",
+                "v": "2023-10-31T00:00:00.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-10-31T00:00:00.000Z"
+              }
+            ]
+          ],
+          "caseId": "billing.js#prorate#c01",
+          "label": "start on October 31",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 100
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 100
+          }
+        },
+        {
+          "args": [
+            [
+              3100,
+              {
+                "$t": "Date",
+                "v": "2023-10-30T00:00:00.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-10-31T00:00:00.000Z"
+              }
+            ]
+          ],
+          "caseId": "billing.js#prorate#c02",
+          "label": "start on October 30",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 200
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 200
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        31,
+        30
+      ],
+      "ruleId": "BR-01",
+      "statement": "A start on the 31st is billed as if it started on the 30th.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "key": "missing-end-uses-today",
+      "probes": [
+        {
+          "args": [
+            [
+              3000,
+              {
+                "$t": "Date",
+                "v": "2023-11-01T00:00:00.000Z"
+              }
+            ]
+          ],
+          "caseId": "billing.js#prorate#c03",
+          "label": "no end date in November",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 1400
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 1400
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [
+        86400000
+      ],
+      "ruleId": "BR-02",
+      "statement": "Without an end date the charge is prorated until today.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "key": "weekly-late-fee",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "$t": "Date",
+                "v": "2023-11-07T22:13:20.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-11-14T22:13:20.000Z"
+              },
+              300
+            ]
+          ],
+          "caseId": "billing.js#lateFee#c01",
+          "label": "seven days late on 300.00",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 4.5
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 4.5
+          }
+        },
+        {
+          "args": [
+            [
+              {
+                "$t": "Date",
+                "v": "2023-11-06T22:13:20.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-11-14T22:13:20.000Z"
+              },
+              300
+            ]
+          ],
+          "caseId": "billing.js#lateFee#c02",
+          "label": "eight days late on 300.00",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 9
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 9
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        0.015,
+        7
+      ],
+      "ruleId": "BR-01",
+      "statement": "A late payment costs 1.5% of the amount per started week.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "key": "fee-capped-at-three-weeks",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "$t": "Date",
+                "v": "2023-10-15T22:13:20.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-11-14T22:13:20.000Z"
+              },
+              300
+            ]
+          ],
+          "caseId": "billing.js#lateFee#c03",
+          "label": "thirty days late on 300.00",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": 13.5
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 13.5
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [
+        3
+      ],
+      "ruleId": "BR-02",
+      "statement": "The late fee stops growing after three weeks.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "key": "early-payment-no-fee",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "$t": "Date",
+                "v": "2023-11-24T22:13:20.000Z"
+              },
+              {
+                "$t": "Date",
+                "v": "2023-11-14T22:13:20.000Z"
+              },
+              300
+            ]
+          ],
+          "caseId": "billing.js#lateFee#c04",
+          "label": "paid ten days early on 300.00",
+          "matched": false,
+          "observed": {
+            "kind": "returned",
+            "value": -4.5
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": 0
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [],
+      "ruleId": "BR-03",
+      "statement": "Paying before the due date costs nothing.",
+      "status": "contradicted"
+    },
+    {
+      "functionId": "billing.js#nextInvoiceNumber",
+      "key": "sequential-numbers",
+      "probes": [
+        {
+          "args": [
+            [],
+            [],
+            []
+          ],
+          "caseId": "billing.js#nextInvoiceNumber#c01",
+          "label": "three numbers in a row",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": "INV-2023-1003"
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": "INV-2023-1003"
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [
+        1000
+      ],
+      "ruleId": "BR-01",
+      "statement": "Invoice numbers count up from 1001 within one running process.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#nextInvoiceNumber",
+      "key": "custom-prefix",
+      "probes": [
+        {
+          "args": [
+            [
+              "CR"
+            ]
+          ],
+          "caseId": "billing.js#nextInvoiceNumber#c02",
+          "label": "credit note prefix",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": "CR-2023-1001"
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": "CR-2023-1001"
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [],
+      "ruleId": "BR-02",
+      "statement": "A given prefix replaces INV at the start of the number.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#calculateInvoice",
+      "key": "oregon-no-tax",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "name": "Bo",
+                "code": "NONE",
+                "state": "OR"
+              },
+              [
+                {
+                  "qty": 2,
+                  "unitPrice": 10
+                }
+              ]
+            ]
+          ],
+          "caseId": "billing.js#calculateInvoice#c01",
+          "label": "Oregon customer, two lines",
+          "matched": true,
+          "observed": {
+            "args": [
+              null,
+              {
+                "number": "INV-2023-1001",
+                "customer": "Bo",
+                "subtotal": 20,
+                "discount": 0,
+                "tax": 0,
+                "total": 20,
+                "ref": "R601103"
+              }
+            ],
+            "kind": "callback"
+          },
+          "prediction": {
+            "kind": "callback",
+            "value": {
+              "number": "INV-2023-1001",
+              "customer": "Bo",
+              "subtotal": 20,
+              "discount": 0,
+              "tax": 0,
+              "total": 20,
+              "ref": "R601103"
+            }
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [
+        0.0725
+      ],
+      "ruleId": "BR-01",
+      "statement": "Customers in Oregon pay no sales tax on their invoice.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#calculateInvoice",
+      "key": "vip-invoice-threshold",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "name": "Cy",
+                "code": "VIP",
+                "state": "CA"
+              },
+              [
+                {
+                  "qty": 4,
+                  "unitPrice": 25
+                }
+              ]
+            ]
+          ],
+          "caseId": "billing.js#calculateInvoice#c02",
+          "label": "VIP customer at exactly 100.00 of lines",
+          "matched": null,
+          "observed": {
+            "args": [
+              null,
+              {
+                "number": "INV-2023-1001",
+                "customer": "Cy",
+                "subtotal": 100,
+                "discount": 0,
+                "tax": 7.25,
+                "total": 107.25,
+                "ref": "R601103"
+              }
+            ],
+            "kind": "callback"
+          },
+          "prediction": {
+            "kind": "unknown"
+          }
+        }
+      ],
+      "probesChecked": 0,
+      "relatedConstants": [
+        100,
+        0.1
+      ],
+      "ruleId": "BR-02",
+      "statement": "A VIP invoice whose lines sum to exactly 100.00 gets the VIP discount before tax.",
+      "status": "unverified"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "key": "thousands-separator",
+      "probes": [
+        {
+          "args": [
+            [
+              123450
+            ]
+          ],
+          "caseId": "billing.js#formatMoney#c01",
+          "label": "one thousand two hundred dollars",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": "1,234.50"
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": "1,234.50"
+          }
+        },
+        {
+          "args": [
+            [
+              100
+            ]
+          ],
+          "caseId": "billing.js#formatMoney#c02",
+          "label": "one dollar",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": "1.00"
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": "1.00"
+          }
+        }
+      ],
+      "probesChecked": 2,
+      "relatedConstants": [
+        100
+      ],
+      "ruleId": "BR-01",
+      "statement": "Cents are shown as dollars with a comma every three digits.",
+      "status": "consistent"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "key": "negative-zero-unsigned",
+      "probes": [
+        {
+          "args": [
+            [
+              {
+                "$t": "-0"
+              }
+            ]
+          ],
+          "caseId": "billing.js#formatMoney#c03",
+          "label": "negative zero",
+          "matched": true,
+          "observed": {
+            "kind": "returned",
+            "value": "0.00"
+          },
+          "prediction": {
+            "kind": "returns",
+            "value": "0.00"
+          }
+        }
+      ],
+      "probesChecked": 1,
+      "relatedConstants": [],
+      "ruleId": "BR-02",
+      "statement": "Negative zero is printed without a minus sign.",
+      "status": "consistent"
+    }
+  ],
+  "scenario": "legacy-billing",
+  "schemaVersion": 1,
+  "suspicious": [
+    {
+      "args": [
+        [
+          -0.125
+        ]
+      ],
+      "caseId": "billing.js#roundMoney#c01",
+      "functionId": "billing.js#roundMoney",
+      "id": "SB-01",
+      "observed": {
+        "kind": "returned",
+        "value": -0.12
+      },
+      "predicted": {
+        "kind": "returns",
+        "value": -0.13
+      },
+      "probeLabel": "negative eighth of a cent",
+      "ruleId": "BR-01",
+      "statement": "Half cents are rounded away from zero, so -0.125 becomes -0.13."
+    },
+    {
+      "args": [
+        [
+          100,
+          "VIP"
+        ]
+      ],
+      "caseId": "billing.js#applyDiscount#c01",
+      "functionId": "billing.js#applyDiscount",
+      "id": "SB-02",
+      "observed": {
+        "kind": "returned",
+        "value": 100
+      },
+      "predicted": {
+        "kind": "returns",
+        "value": 90
+      },
+      "probeLabel": "subtotal exactly 100.00 with VIP",
+      "ruleId": "BR-01",
+      "statement": "VIP customers get 10% off orders of 100.00 or more."
+    },
+    {
+      "args": [
+        [
+          {
+            "$t": "Date",
+            "v": "2023-11-24T22:13:20.000Z"
+          },
+          {
+            "$t": "Date",
+            "v": "2023-11-14T22:13:20.000Z"
+          },
+          300
+        ]
+      ],
+      "caseId": "billing.js#lateFee#c04",
+      "functionId": "billing.js#lateFee",
+      "id": "SB-03",
+      "observed": {
+        "kind": "returned",
+        "value": -4.5
+      },
+      "predicted": {
+        "kind": "returns",
+        "value": 0
+      },
+      "probeLabel": "paid ten days early on 300.00",
+      "ruleId": "BR-03",
+      "statement": "Paying before the due date costs nothing."
+    }
+  ],
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "tests": [
+    {
+      "count": 96,
+      "file": "tests/billing.characterization.test.mts",
+      "module": "billing.js"
+    }
+  ],
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  }
+}

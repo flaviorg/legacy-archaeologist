@@ -1,0 +1,18 @@
+flowchart LR
+  T["Target directory\n(legacy JS)"] --> MAP["1. Static map\nacorn + acorn-walk\n(deterministic)"]
+  MAP --> HYP["2. Hypotheses and inputs\nLLM proposes\n(fake by default)\nor provider none:\ninputs from the map"]
+  HYP --> VAL["Zod validation + caps\n(deterministic)"]
+  VAL --> REC["3. Recorder\nstaged copy, child process:\n--permission, net guard,\nfrozen clock, re-seeded\nper case, watchdog SIGKILL\n(deterministic)"]
+  T --> REC
+  REC --> RECS[("records.json\nactual outcomes")]
+  MAP --> MUT["4. Mutator + score\n6 AST operators, replay in child\n(deterministic)"]
+  RECS --> MUT
+  MUT -- "survivors (1 bounded round)" --> HYP2["LLM proposes extra inputs"]
+  HYP2 --> VAL
+  RECS --> GEN["5. Test emitter + SPEC.md\nafter the loop\n(deterministic)"]
+  MUT --> GEN
+  GEN --> TESTS["tests/*.characterization.test.mts"]
+  GEN --> SPEC["SPEC.md\nrules -> tests -> source lines"]
+  RECS --> SUS["6. Suspicious behaviors\nprediction != observed\n(deterministic comparison)"]
+  SUS --> SPEC
+  TESTS --> VER["7. verify --against refactor\nsame child isolation\n(deterministic)"]

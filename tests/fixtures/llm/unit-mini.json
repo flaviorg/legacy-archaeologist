@@ -1,0 +1,100 @@
+{
+  "promptHashes": {
+    "hypothesize.v1": "sha256:ab63334dd6a9dcbd3f49f602112313751b935018004e812c7fa4c589c0f43850",
+    "survivor-inputs.v1": "sha256:8bfb4907865f7715c240c185267bd837549a6a4c32d9ceba312fb016028dfc25"
+  },
+  "scenario": "unit-mini",
+  "schemaVersion": 1,
+  "targetDir": "tests/fixtures/targets/two-functions",
+  "targetSha": "sha256:7b2166582c0d7e1f7a2b50dcec22c618825da821b12e868a0984fabefe3fcf7c",
+  "turns": [
+    {
+      "id": "hyp-a",
+      "output": {
+        "partitions": [
+          {
+            "label": "zero",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "doubles-input",
+            "probes": [
+              {
+                "label": "three doubled",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 6
+                },
+                "steps": [
+                  {
+                    "args": [
+                      3
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              2
+            ],
+            "statement": "a returns twice its argument"
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 40,
+        "promptTokens": 120
+      },
+      "when": {
+        "functionId": "index.js#a"
+      }
+    },
+    {
+      "id": "hyp-b",
+      "output": {
+        "partitions": [
+          {
+            "label": "first larger",
+            "steps": [
+              {
+                "args": [
+                  5,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "second larger",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 30,
+        "promptTokens": 130
+      },
+      "when": {
+        "functionId": "index.js#b"
+      }
+    }
+  ]
+}

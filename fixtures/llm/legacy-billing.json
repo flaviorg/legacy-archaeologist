@@ -1,0 +1,1249 @@
+{
+  "promptHashes": {
+    "hypothesize.v1": "sha256:ab63334dd6a9dcbd3f49f602112313751b935018004e812c7fa4c589c0f43850",
+    "survivor-inputs.v1": "sha256:8bfb4907865f7715c240c185267bd837549a6a4c32d9ceba312fb016028dfc25"
+  },
+  "scenario": "legacy-billing",
+  "schemaVersion": 1,
+  "targetDir": "fixtures/legacy-billing",
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "turns": [
+    {
+      "id": "hyp-roundMoney",
+      "output": {
+        "notes": "Rounding uses Math.floor(n * 100 + 0.5), which behaves differently for negative half cents.",
+        "partitions": [
+          {
+            "label": "zero amount",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "large amount with fraction",
+            "steps": [
+              {
+                "args": [
+                  123456.789
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "half-cent-away-from-zero",
+            "probes": [
+              {
+                "label": "negative eighth of a cent",
+                "prediction": {
+                  "kind": "returns",
+                  "value": -0.13
+                },
+                "steps": [
+                  {
+                    "args": [
+                      -0.125
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "positive eighth of a cent",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 0.13
+                },
+                "steps": [
+                  {
+                    "args": [
+                      0.125
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              100,
+              0.5
+            ],
+            "statement": "Half cents are rounded away from zero, so -0.125 becomes -0.13."
+          },
+          {
+            "key": "rounds-to-cents",
+            "probes": [
+              {
+                "label": "three decimals",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 1.23
+                },
+                "steps": [
+                  {
+                    "args": [
+                      1.234
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "whole amount unchanged",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 10
+                },
+                "steps": [
+                  {
+                    "args": [
+                      10
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              100
+            ],
+            "statement": "Any amount is rounded to two decimal places."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 238,
+        "promptTokens": 612
+      },
+      "when": {
+        "functionId": "billing.js#roundMoney"
+      }
+    },
+    {
+      "id": "hyp-applyDiscount",
+      "output": {
+        "partitions": [
+          {
+            "label": "lowercase vip code",
+            "steps": [
+              {
+                "args": [
+                  150,
+                  "vip"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "zero subtotal with VIP",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "VIP"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "vip-threshold",
+            "probes": [
+              {
+                "label": "subtotal exactly 100.00 with VIP",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 90
+                },
+                "steps": [
+                  {
+                    "args": [
+                      100,
+                      "VIP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "VIP well above the threshold",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 135
+                },
+                "steps": [
+                  {
+                    "args": [
+                      150,
+                      "VIP"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              100,
+              0.1
+            ],
+            "statement": "VIP customers get 10% off orders of 100.00 or more."
+          },
+          {
+            "key": "staff-discount",
+            "probes": [
+              {
+                "label": "staff on 80.00",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 60
+                },
+                "steps": [
+                  {
+                    "args": [
+                      80,
+                      "STAFF"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "staff on a tiny amount",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 0.03
+                },
+                "steps": [
+                  {
+                    "args": [
+                      0.04,
+                      "STAFF"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              0.25
+            ],
+            "statement": "Staff always get 25% off, whatever the subtotal."
+          },
+          {
+            "key": "unknown-code-unchanged",
+            "probes": [
+              {
+                "label": "unknown code",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 50
+                },
+                "steps": [
+                  {
+                    "args": [
+                      50,
+                      "NOPE"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [],
+            "statement": "An unknown discount code leaves the subtotal unchanged."
+          },
+          {
+            "key": "missing-code-throws",
+            "probes": [
+              {
+                "label": "null code",
+                "prediction": {
+                  "kind": "throws",
+                  "name": "TypeError"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      100,
+                      null
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [],
+            "statement": "A missing (null) discount code throws a TypeError."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 401,
+        "promptTokens": 655
+      },
+      "when": {
+        "functionId": "billing.js#applyDiscount"
+      }
+    },
+    {
+      "id": "hyp-prorate",
+      "output": {
+        "partitions": [
+          {
+            "label": "full month of November",
+            "steps": [
+              {
+                "args": [
+                  3000,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-01T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-30T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "month-end-start",
+            "probes": [
+              {
+                "label": "start on October 31",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 100
+                },
+                "steps": [
+                  {
+                    "args": [
+                      3100,
+                      {
+                        "$t": "Date",
+                        "v": "2023-10-31T00:00:00.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-10-31T00:00:00.000Z"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "start on October 30",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 200
+                },
+                "steps": [
+                  {
+                    "args": [
+                      3100,
+                      {
+                        "$t": "Date",
+                        "v": "2023-10-30T00:00:00.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-10-31T00:00:00.000Z"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              31,
+              30
+            ],
+            "statement": "A start on the 31st is billed as if it started on the 30th."
+          },
+          {
+            "key": "missing-end-uses-today",
+            "probes": [
+              {
+                "label": "no end date in November",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 1400
+                },
+                "steps": [
+                  {
+                    "args": [
+                      3000,
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-01T00:00:00.000Z"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              86400000
+            ],
+            "statement": "Without an end date the charge is prorated until today."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 356,
+        "promptTokens": 702
+      },
+      "when": {
+        "functionId": "billing.js#prorate"
+      }
+    },
+    {
+      "id": "hyp-lateFee",
+      "output": {
+        "partitions": [
+          {
+            "label": "paid on the due date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  300
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "weekly-late-fee",
+            "probes": [
+              {
+                "label": "seven days late on 300.00",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 4.5
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-07T22:13:20.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-14T22:13:20.000Z"
+                      },
+                      300
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "eight days late on 300.00",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 9
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-06T22:13:20.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-14T22:13:20.000Z"
+                      },
+                      300
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              0.015,
+              7
+            ],
+            "statement": "A late payment costs 1.5% of the amount per started week."
+          },
+          {
+            "key": "fee-capped-at-three-weeks",
+            "probes": [
+              {
+                "label": "thirty days late on 300.00",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 13.5
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "$t": "Date",
+                        "v": "2023-10-15T22:13:20.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-14T22:13:20.000Z"
+                      },
+                      300
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              3
+            ],
+            "statement": "The late fee stops growing after three weeks."
+          },
+          {
+            "key": "early-payment-no-fee",
+            "probes": [
+              {
+                "label": "paid ten days early on 300.00",
+                "prediction": {
+                  "kind": "returns",
+                  "value": 0
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-24T22:13:20.000Z"
+                      },
+                      {
+                        "$t": "Date",
+                        "v": "2023-11-14T22:13:20.000Z"
+                      },
+                      300
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [],
+            "statement": "Paying before the due date costs nothing."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 389,
+        "promptTokens": 668
+      },
+      "when": {
+        "functionId": "billing.js#lateFee"
+      }
+    },
+    {
+      "id": "hyp-nextInvoiceNumber",
+      "output": {
+        "partitions": [
+          {
+            "label": "empty prefix",
+            "steps": [
+              {
+                "args": [
+                  ""
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "sequential-numbers",
+            "probes": [
+              {
+                "label": "three numbers in a row",
+                "prediction": {
+                  "kind": "returns",
+                  "value": "INV-2023-1003"
+                },
+                "steps": [
+                  {
+                    "args": []
+                  },
+                  {
+                    "args": []
+                  },
+                  {
+                    "args": []
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              1000
+            ],
+            "statement": "Invoice numbers count up from 1001 within one running process."
+          },
+          {
+            "key": "custom-prefix",
+            "probes": [
+              {
+                "label": "credit note prefix",
+                "prediction": {
+                  "kind": "returns",
+                  "value": "CR-2023-1001"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      "CR"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [],
+            "statement": "A given prefix replaces INV at the start of the number."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 274,
+        "promptTokens": 540
+      },
+      "when": {
+        "functionId": "billing.js#nextInvoiceNumber"
+      }
+    },
+    {
+      "id": "hyp-calculateInvoice",
+      "output": {
+        "notes": "The invoice reference comes from Math.random and the function writes global.LAST_INVOICE.",
+        "partitions": [
+          {
+            "label": "no lines",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "name": "Ann",
+                    "code": "NONE",
+                    "state": "CA"
+                  },
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "staff customer in a taxed state",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "name": "Di",
+                    "code": "STAFF",
+                    "state": "CA"
+                  },
+                  [
+                    {
+                      "qty": 1,
+                      "unitPrice": 80
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "oregon-no-tax",
+            "probes": [
+              {
+                "label": "Oregon customer, two lines",
+                "prediction": {
+                  "kind": "callback",
+                  "value": {
+                    "number": "INV-2023-1001",
+                    "customer": "Bo",
+                    "subtotal": 20,
+                    "discount": 0,
+                    "tax": 0,
+                    "total": 20,
+                    "ref": "R601103"
+                  }
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "name": "Bo",
+                        "code": "NONE",
+                        "state": "OR"
+                      },
+                      [
+                        {
+                          "qty": 2,
+                          "unitPrice": 10
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              0.0725
+            ],
+            "statement": "Customers in Oregon pay no sales tax on their invoice."
+          },
+          {
+            "key": "vip-invoice-threshold",
+            "probes": [
+              {
+                "label": "VIP customer at exactly 100.00 of lines",
+                "prediction": {
+                  "kind": "unknown"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "name": "Cy",
+                        "code": "VIP",
+                        "state": "CA"
+                      },
+                      [
+                        {
+                          "qty": 4,
+                          "unitPrice": 25
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              100,
+              0.1
+            ],
+            "statement": "A VIP invoice whose lines sum to exactly 100.00 gets the VIP discount before tax."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 512,
+        "promptTokens": 910
+      },
+      "when": {
+        "functionId": "billing.js#calculateInvoice"
+      }
+    },
+    {
+      "id": "hyp-formatMoney",
+      "output": {
+        "partitions": [
+          {
+            "label": "sub-cent negative amount",
+            "steps": [
+              {
+                "args": [
+                  -0.4
+                ]
+              }
+            ]
+          },
+          {
+            "label": "over a million dollars",
+            "steps": [
+              {
+                "args": [
+                  123456789
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "key": "thousands-separator",
+            "probes": [
+              {
+                "label": "one thousand two hundred dollars",
+                "prediction": {
+                  "kind": "returns",
+                  "value": "1,234.50"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      123450
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "one dollar",
+                "prediction": {
+                  "kind": "returns",
+                  "value": "1.00"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      100
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [
+              100
+            ],
+            "statement": "Cents are shown as dollars with a comma every three digits."
+          },
+          {
+            "key": "negative-zero-unsigned",
+            "probes": [
+              {
+                "label": "negative zero",
+                "prediction": {
+                  "kind": "returns",
+                  "value": "0.00"
+                },
+                "steps": [
+                  {
+                    "args": [
+                      {
+                        "$t": "-0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "relatedConstants": [],
+            "statement": "Negative zero is printed without a minus sign."
+          }
+        ]
+      },
+      "prompt": "hypothesize.v1",
+      "usage": {
+        "completionTokens": 296,
+        "promptTokens": 588
+      },
+      "when": {
+        "functionId": "billing.js#formatMoney"
+      }
+    },
+    {
+      "id": "survivor-m-0034",
+      "output": {
+        "inputs": [
+          {
+            "label": "starts on the 31st and runs into the next month",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-02T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "starts and ends on the 31st",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-31T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "The 31st is clamped to the 30th, which only matters when the period runs past the end of the month."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0034",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0035",
+      "output": {
+        "inputs": [
+          {
+            "label": "starts on the 30th and runs past month end",
+            "steps": [
+              {
+                "args": [
+                  3000,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-30T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-02T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "starts on December 31st",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2024-01-05T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "A start on the 31st that runs into the next month shows whether the 31st is clamped."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0035",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0036",
+      "output": {
+        "inputs": [],
+        "likelyEquivalent": true,
+        "reason": "getDate never returns 0 for a valid date, so the changed branch never runs."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0036",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0037",
+      "output": {
+        "inputs": [
+          {
+            "label": "August 31st into September",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-08-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-09-03T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "Without the clamp a start on the 31st leaves one day less in the month."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0037",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0038",
+      "output": {
+        "inputs": [
+          {
+            "label": "May 31st to June 1st",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-05-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-06-01T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "Clamping the 31st to 31 instead of 30 changes the days left when the period crosses the month end."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0038",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0039",
+      "output": {
+        "inputs": [
+          {
+            "label": "January 31st into February",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-01-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-02-04T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "Clamping to the 29th leaves three days instead of two."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0039",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0040",
+      "output": {
+        "inputs": [
+          {
+            "label": "March 31st into April",
+            "steps": [
+              {
+                "args": [
+                  3100,
+                  {
+                    "$t": "Date",
+                    "v": "2023-03-31T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-04-10T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "Clamping to day 0 leaves the whole month as remaining days."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0040",
+        "round": 1
+      }
+    },
+    {
+      "error": {
+        "kind": "invalid_output",
+        "raw": "Sure! Two inputs in February should do it: prorate(2800, Feb 10 2023) and prorate(2900, Feb 10 2024)."
+      },
+      "id": "survivor-m-0041-invalid",
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0041",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0041-repair",
+      "output": {
+        "inputs": [
+          {
+            "label": "one day in February",
+            "steps": [
+              {
+                "args": [
+                  2800,
+                  {
+                    "$t": "Date",
+                    "v": "2023-02-10T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-02-10T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "one day in a leap-year February",
+            "steps": [
+              {
+                "args": [
+                  2900,
+                  {
+                    "$t": "Date",
+                    "v": "2024-02-10T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2024-02-10T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "February is the only month whose length differs from the month two before it."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0041",
+        "repair": true,
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0046",
+      "output": {
+        "inputs": [
+          {
+            "label": "late start running into next month",
+            "steps": [
+              {
+                "args": [
+                  3000,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-25T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-10T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "late start with a grace period of 5 days",
+            "steps": [
+              {
+                "args": [
+                  3000,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-25T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-10T00:00:00.000Z"
+                  },
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "A period longer than the days left in the month is cut at the month end."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0046",
+        "round": 1
+      }
+    },
+    {
+      "id": "survivor-m-0048",
+      "output": {
+        "inputs": [
+          {
+            "label": "late start ending one day after month end",
+            "steps": [
+              {
+                "args": [
+                  3000,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-25T00:00:00.000Z"
+                  },
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-01T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "likelyEquivalent": false,
+        "reason": "One day past the days left in the month shows an off-by-one in the remaining days."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "billing.js#prorate",
+        "mutantId": "m-0048",
+        "round": 1
+      }
+    }
+  ]
+}

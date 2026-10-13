@@ -1,0 +1,2944 @@
+{
+  "cases": [
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c01",
+      "label": "base vector",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "2B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "100B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.5B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c02",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c34",
+      "label": "arg 1 = 1 / arg 2 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c02",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c35",
+      "label": "arg 1 = 1 / arg 2 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c03",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c36",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-2B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c03",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c37",
+      "label": "arg 1 = -1 / arg 2 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c03",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c38",
+      "label": "arg 1 = -1 / arg 2 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c04",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c39",
+      "label": "arg 1 = 2 / arg 1 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "3B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#bytes#c04",
+      "exportName": "default",
+      "functionId": "index.js#bytes",
+      "id": "index.js#bytes#c40",
+      "label": "arg 1 = 2 / arg 2 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "2B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c01",
+      "label": "base vector",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "2B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "100B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.5B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c34",
+      "label": "arg 1 = 3 (magic number 2 + 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "3B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c35",
+      "label": "arg 2 = 3 (magic number 2 + 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            3
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#format#c02",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c36",
+      "label": "arg 1 = 1 / arg 2 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#format#c02",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c37",
+      "label": "arg 1 = 1 / arg 2 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#format#c03",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c38",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-2B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#format#c03",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c39",
+      "label": "arg 1 = -1 / arg 2 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#format#c03",
+      "exportName": "format",
+      "functionId": "index.js#format",
+      "id": "index.js#format#c40",
+      "label": "arg 1 = -1 / arg 2 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1B"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c01",
+      "label": "base vector",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c18",
+      "label": "arg 1 = 10 (magic number)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            10
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 10
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c19",
+      "label": "arg 1 = 9 (magic number 10 - 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            9
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 9
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c20",
+      "label": "arg 1 = 11 (magic number 10 + 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            11
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 11
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c21",
+      "label": "arg 1 = 4 (magic number)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            4
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 4
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c22",
+      "label": "arg 1 = 3 (magic number 4 - 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 3
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c23",
+      "label": "arg 1 = 5 (magic number 4 + 1)",
+      "moduleFile": "index.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c03",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c24",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c05",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c25",
+      "label": "arg 1 = 100 / arg 1 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 99
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c05",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c26",
+      "label": "arg 1 = 100 / arg 1 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 101
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c06",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c27",
+      "label": "arg 1 = -0.5 / arg 1 -0.01",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.51
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.51
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c06",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c28",
+      "label": "arg 1 = -0.5 / arg 1 +0.01",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.49
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.49
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c19",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c29",
+      "label": "arg 1 = 9 (magic number 10 - 1) / arg 1 -1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            8
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 8
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c20",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c30",
+      "label": "arg 1 = 11 (magic number 10 + 1) / arg 1 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            12
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 12
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "index.js#parse#c23",
+      "exportName": "parse",
+      "functionId": "index.js#parse",
+      "id": "index.js#parse#c31",
+      "label": "arg 1 = 5 (magic number 4 + 1) / arg 1 +1",
+      "moduleFile": "index.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            6
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 6
+          }
+        }
+      ],
+      "style": "sync"
+    }
+  ],
+  "limits": {
+    "maxArgs": 8,
+    "maxCasesPerFunction": 40,
+    "maxDepth": 5,
+    "maxExpansionsPerCase": 4,
+    "maxExpansionsPerFunction": 12,
+    "maxSteps": 5
+  },
+  "loadErrors": [],
+  "schemaVersion": 1,
+  "targetSha": "sha256:a7944d9db89af14a3e80716925b7361732c555ccf649aae26f526bd9f6e5c2fd",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  },
+  "world": {
+    "clockNow": 1700000000000,
+    "seed": 42,
+    "tz": "UTC"
+  }
+}

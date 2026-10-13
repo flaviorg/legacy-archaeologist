@@ -1,0 +1,48 @@
+{
+  "promptHashes": {
+    "hypothesize.v1": "sha256:ab63334dd6a9dcbd3f49f602112313751b935018004e812c7fa4c589c0f43850",
+    "survivor-inputs.v1": "sha256:8bfb4907865f7715c240c185267bd837549a6a4c32d9ceba312fb016028dfc25"
+  },
+  "scenario": "survivor-equivalent",
+  "schemaVersion": 1,
+  "targetDir": "tests/fixtures/targets/threshold",
+  "targetSha": "sha256:96574ce153e317b4346c0183dacfff238b8753d16d574c4180034250e582d8c0",
+  "turns": [
+    {
+      "id": "hyp-fee",
+      "output": {
+        "partitions": [
+          {
+            "label": "well above the threshold",
+            "steps": [
+              {
+                "args": [
+                  20
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "prompt": "hypothesize.v1",
+      "when": {
+        "functionId": "index.js#fee"
+      }
+    },
+    {
+      "id": "r1-m0003",
+      "output": {
+        "inputs": [],
+        "likelyEquivalent": true,
+        "reason": "The threshold value is never passed in practice, so both versions behave the same."
+      },
+      "prompt": "survivor-inputs.v1",
+      "when": {
+        "functionId": "index.js#fee",
+        "mutantId": "m-0003",
+        "round": 1
+      }
+    }
+  ]
+}

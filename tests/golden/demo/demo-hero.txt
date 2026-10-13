@@ -1,0 +1,7 @@
+legacy-archaeologist 0.1.0 · demo · no network · no key
+fixtures/legacy-billing is a fixture we wrote with known quirks; the tool flags them without being told where they are:
+  ✔ lateFee paid ten days early on 300.00 returns -4.5 (a credit): flagged as SB-03, not fixed
+  ✔ the broken refactor fails 5 recorded cases (roundMoney, applyDiscount, calculateInvoice); the modern one passes all 96
+bytes@3.1.2, code we did not write, no LLM: 3 functions · 111 stable cases · mutation score 48.6% · 38 surviving mutants
+mutation score on the fixture · none 31.6% · fake 90.2% (scripted: author-written survivor inputs; proves the loop, not the model)
+artifacts: artifacts/demo/SPEC.md · artifacts/demo/tests/ · artifacts/demo/llm-trace.jsonl · artifacts/demo-third-party/SPEC.md

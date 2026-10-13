@@ -1,0 +1,21 @@
+# Comparison
+
+legacy-archaeologist is a portfolio-scale tool: a static map, LLM-proposed inputs validated by code, the real code as the oracle, a deterministic mutation score as the proof and a `SPEC.md` linking each rule to evidence. It is not a replacement for StrykerJS or Diffblue Cover. The "status" column keeps the date each row was checked; no row was re-checked while this repository was built (no network was used).
+
+| Tool | What it does | What this project does differently | Status (date checked) | Source |
+|---|---|---|---|---|
+| StrykerJS 10.0.0 | Mature mutation testing for JS/TS, 16 mutator groups, a TAP runner for `node:test` | Writes no tests and no spec. We use its score formula so the definitions match; the scores are not comparable because our mutator has 6 operators | Active (2026-10-08) | https://stryker-mutator.io, https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/ |
+| Approval / snapshot testing (ApprovalTests, `approvals` 7.3.0, `node:test` snapshots) | Records outputs for inputs a human chose, then diffs | Input discovery (proposed by an LLM or derived from the map, validated by code), a strength proof (mutation score), a spec with evidence links | Active; `approvals` last modified 2025-04 (2026-10-08) | npm registry; https://nodejs.org/api/test.html |
+| Diffblue Cover | Captures current Java/Kotlin behavior as regression tests with reinforcement learning (vendor claims) | Same philosophy (behavior is the oracle) and the closest conceptual predecessor; ours is JavaScript, open, with a spec and a mutation proof | Commercial; vendor claims not verified here (2026-10-08) | https://www.diffblue.com, https://docs.diffblue.com/get-started |
+| Pythagora (`Pythagora-io/pythagora`) | The closest JS predecessor: integration tests from recorded Express server activity, and unit tests written by GPT-4 with model-written expectations | Function-level recording with no live traffic; expected values always recorded from the code in an isolated child; a deterministic mutation score, a `SPEC.md` with evidence links and the lying-LLM test | Its README says the repository is deprecated in favor of GPT Pilot; not archived (2026-10-12) | https://github.com/Pythagora-io/pythagora |
+| Keploy | Records API calls and their dependencies at the network level and replays them as tests and mocks | Works on the exported functions of a module rather than HTTP traffic; no running service needed; mutation score and living spec | Active (2026-10-12) | https://github.com/keploy/keploy |
+| TestPilot (GitHub Next) | An LLM writes JS unit tests and their expectations | The LLM never writes expectations here | Archived 2025-02-03 (2026-10-08) | https://github.com/githubnext/testpilot, arXiv 2302.06527 |
+| Qodo Cover / Cover-Agent | Coverage-driven LLM test generation in CI | Mutation score instead of coverage; recorded oracles | Marked no longer maintained (2026-10-08) | https://github.com/qodo-ai/qodo-cover |
+| CoverUp | Coverage-guided LLM tests for Python | Python; coverage metric; no spec | Research, FSE 2025 (2026-10-08) | arXiv 2403.16218 |
+| Mutahunter | An LLM creates the mutants | Deterministic AST mutants, reproducible score | Open source (2026-10-08) | https://github.com/codeintegrity-ai/mutahunter |
+| Meta ACH | An LLM creates mutants and judges equivalence, at Meta's scale | Deterministic mutants; the LLM's equivalence answer is only advisory; portfolio scale | Research paper, FSE Companion 2025 (2026-10-08) | arXiv 2501.12862 |
+| fast-check | Property-based testing with human-written properties | A possible future input generator | Active (2026-10-08) | npm registry |
+
+## The gap, in one paragraph
+
+Most AI test generators ask the model to guess expected values and measure success with coverage. Characterization tools (approval tests, Diffblue Cover) record behavior but either need a human to pick the inputs or are neither open nor JavaScript. Mutation tools measure test strength but write no tests. This project combines the pieces at small scale, and says which parts are deterministic (parser, harness, recorder, mutator, score, spec linking), which are LLM (hypotheses, input proposals, labels, prose) and which are scripted in offline mode (the fake provider).

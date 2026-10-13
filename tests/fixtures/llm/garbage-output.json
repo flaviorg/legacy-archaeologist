@@ -1,0 +1,35 @@
+{
+  "promptHashes": {
+    "hypothesize.v1": "sha256:ab63334dd6a9dcbd3f49f602112313751b935018004e812c7fa4c589c0f43850",
+    "survivor-inputs.v1": "sha256:8bfb4907865f7715c240c185267bd837549a6a4c32d9ceba312fb016028dfc25"
+  },
+  "scenario": "garbage-output",
+  "schemaVersion": 1,
+  "targetDir": "fixtures/legacy-billing",
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "turns": [
+    {
+      "error": {
+        "kind": "invalid_output",
+        "raw": "{ \"rules\": \"not an array\", \"partitions\": 7 }"
+      },
+      "id": "hyp-roundMoney-garbage",
+      "prompt": "hypothesize.v1",
+      "when": {
+        "functionId": "billing.js#roundMoney"
+      }
+    },
+    {
+      "error": {
+        "kind": "invalid_output",
+        "raw": "Sure! Here are some rules for roundMoney: it rounds money."
+      },
+      "id": "hyp-roundMoney-repair-garbage",
+      "prompt": "hypothesize.v1",
+      "when": {
+        "functionId": "billing.js#roundMoney",
+        "repair": true
+      }
+    }
+  ]
+}

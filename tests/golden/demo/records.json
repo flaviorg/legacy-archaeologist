@@ -1,0 +1,2945 @@
+{
+  "cases": [
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c01",
+      "label": "negative eighth of a cent",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.125
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.12
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c02",
+      "label": "positive eighth of a cent",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.125
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.13
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c03",
+      "label": "three decimals",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1.234
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1.23
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c04",
+      "label": "whole amount unchanged",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            10
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 10
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c05",
+      "label": "zero amount",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c06",
+      "label": "large amount with fraction",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456.789
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 123456.79
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c01",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c07",
+      "label": "negative eighth of a cent / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.135
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.13
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c01",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c08",
+      "label": "negative eighth of a cent / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.115
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.11
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c02",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c09",
+      "label": "positive eighth of a cent / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.115
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.12
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c02",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c10",
+      "label": "positive eighth of a cent / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.135
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.14
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c03",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c11",
+      "label": "three decimals / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1.224
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1.22
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c03",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c12",
+      "label": "three decimals / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1.244
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1.24
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c04",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c13",
+      "label": "whole amount unchanged / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            9
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 9
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c04",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c14",
+      "label": "whole amount unchanged / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            11
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 11
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c05",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c15",
+      "label": "zero amount / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c05",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c16",
+      "label": "zero amount / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c06",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c17",
+      "label": "large amount with fraction / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456.779
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 123456.78
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c06",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c18",
+      "label": "large amount with fraction / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456.799
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 123456.8
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c01",
+      "label": "subtotal exactly 100.00 with VIP",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c02",
+      "label": "VIP well above the threshold",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            150,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 135
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c03",
+      "label": "staff on 80.00",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            80,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 60
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c04",
+      "label": "staff on a tiny amount",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.04,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.03
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c05",
+      "label": "unknown code",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-03"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            50,
+            "NOPE"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 50
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c06",
+      "label": "null code",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-04"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            null
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c07",
+      "label": "lowercase vip code",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            150,
+            "vip"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 150
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c08",
+      "label": "zero subtotal with VIP",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c01",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c09",
+      "label": "subtotal exactly 100.00 with VIP / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 99
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c01",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c10",
+      "label": "subtotal exactly 100.00 with VIP / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 90.9
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c02",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c11",
+      "label": "VIP well above the threshold / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            149,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 134.1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c02",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c12",
+      "label": "VIP well above the threshold / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            151,
+            "VIP"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 135.9
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c03",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c13",
+      "label": "staff on 80.00 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            79,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 59.25
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c03",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c14",
+      "label": "staff on 80.00 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            81,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 60.75
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c04",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c15",
+      "label": "staff on a tiny amount / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.03,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.0225
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c04",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c16",
+      "label": "staff on a tiny amount / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.05,
+            "STAFF"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.037500000000000006
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c05",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c17",
+      "label": "unknown code / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            49,
+            "NOPE"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 49
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c05",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c18",
+      "label": "unknown code / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            51,
+            "NOPE"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 51
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c06",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c19",
+      "label": "null code / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99,
+            null
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c06",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c20",
+      "label": "null code / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101,
+            null
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c01",
+      "label": "start on October 31",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c02",
+      "label": "start on October 30",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-10-30T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c03",
+      "label": "no end date in November",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3000,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1400
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c04",
+      "label": "full month of November",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3000,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-30T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 3000
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c01",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c05",
+      "label": "start on October 31 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3099,
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c01",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c06",
+      "label": "start on October 31 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3101,
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c02",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c07",
+      "label": "start on October 30 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3099,
+            {
+              "$t": "Date",
+              "v": "2023-10-30T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c02",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c08",
+      "label": "start on October 30 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3101,
+            {
+              "$t": "Date",
+              "v": "2023-10-30T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c03",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c09",
+      "label": "no end date in November / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2999,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1400
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c03",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c10",
+      "label": "no end date in November / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3001,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1400
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c04",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c11",
+      "label": "full month of November / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2999,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-30T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 2999
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#prorate#c04",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c12",
+      "label": "full month of November / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3001,
+            {
+              "$t": "Date",
+              "v": "2023-11-01T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-30T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 3001
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c13",
+      "label": "starts on the 31st and runs into the next month",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0034",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-10-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-02T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c14",
+      "label": "starts on the 30th and runs past month end",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0035",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3000,
+            {
+              "$t": "Date",
+              "v": "2023-11-30T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-12-02T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c15",
+      "label": "starts on December 31st",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0035",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-12-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2024-01-05T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c16",
+      "label": "August 31st into September",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0037",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-08-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-09-03T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c17",
+      "label": "May 31st to June 1st",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0038",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-05-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-06-01T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c18",
+      "label": "January 31st into February",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0039",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-01-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-02-04T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c19",
+      "label": "March 31st into April",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0040",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3100,
+            {
+              "$t": "Date",
+              "v": "2023-03-31T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-04-10T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 200
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c20",
+      "label": "one day in February",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0041",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2800,
+            {
+              "$t": "Date",
+              "v": "2023-02-10T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-02-10T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c21",
+      "label": "one day in a leap-year February",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0041",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2900,
+            {
+              "$t": "Date",
+              "v": "2024-02-10T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2024-02-10T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c22",
+      "label": "late start running into next month",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0046",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3000,
+            {
+              "$t": "Date",
+              "v": "2023-11-25T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-12-10T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 600
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c23",
+      "label": "late start ending one day after month end",
+      "moduleFile": "billing.js",
+      "mutantRef": "m-0048",
+      "origin": "survivor-round",
+      "round": 1,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3000,
+            {
+              "$t": "Date",
+              "v": "2023-11-25T00:00:00.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-12-01T00:00:00.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 600
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c01",
+      "label": "seven days late on 300.00",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-07T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            300
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 4.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c02",
+      "label": "eight days late on 300.00",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-06T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            300
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 9
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c03",
+      "label": "thirty days late on 300.00",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-10-15T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            300
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 13.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c04",
+      "label": "paid ten days early on 300.00",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-03"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-24T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            300
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -4.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c05",
+      "label": "paid on the due date",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            300
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c01",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c06",
+      "label": "seven days late on 300.00 / arg 3 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-07T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            299
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 4.484999999999999
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c01",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c07",
+      "label": "seven days late on 300.00 / arg 3 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-07T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            301
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 4.515
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c02",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c08",
+      "label": "eight days late on 300.00 / arg 3 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-06T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            299
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 8.969999999999999
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c02",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c09",
+      "label": "eight days late on 300.00 / arg 3 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-06T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            301
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 9.03
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c03",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c10",
+      "label": "thirty days late on 300.00 / arg 3 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-10-15T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            299
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 13.455
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c03",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c11",
+      "label": "thirty days late on 300.00 / arg 3 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-10-15T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            301
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 13.545
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c04",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c12",
+      "label": "paid ten days early on 300.00 / arg 3 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-24T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            299
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -4.484999999999999
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c04",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c13",
+      "label": "paid ten days early on 300.00 / arg 3 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-24T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            301
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -4.515
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c05",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c14",
+      "label": "paid on the due date / arg 3 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            299
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#lateFee#c05",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c15",
+      "label": "paid on the due date / arg 3 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            301
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c01",
+      "label": "three numbers in a row",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        },
+        {
+          "args": [],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1002"
+          }
+        },
+        {
+          "args": [],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1003"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c02",
+      "label": "credit note prefix",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "CR"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "CR-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c03",
+      "label": "empty prefix",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c01",
+      "label": "Oregon customer, two lines",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "name": "Bo",
+              "code": "NONE",
+              "state": "OR"
+            },
+            [
+              {
+                "qty": 2,
+                "unitPrice": 10
+              }
+            ]
+          ],
+          "outcome": {
+            "args": [
+              null,
+              {
+                "number": "INV-2023-1001",
+                "customer": "Bo",
+                "subtotal": 20,
+                "discount": 0,
+                "tax": 0,
+                "total": 20,
+                "ref": "R601103"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c02",
+      "label": "VIP customer at exactly 100.00 of lines",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "name": "Cy",
+              "code": "VIP",
+              "state": "CA"
+            },
+            [
+              {
+                "qty": 4,
+                "unitPrice": 25
+              }
+            ]
+          ],
+          "outcome": {
+            "args": [
+              null,
+              {
+                "number": "INV-2023-1001",
+                "customer": "Cy",
+                "subtotal": 100,
+                "discount": 0,
+                "tax": 7.25,
+                "total": 107.25,
+                "ref": "R601103"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c03",
+      "label": "no lines",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "name": "Ann",
+              "code": "NONE",
+              "state": "CA"
+            },
+            []
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c04",
+      "label": "staff customer in a taxed state",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "name": "Di",
+              "code": "STAFF",
+              "state": "CA"
+            },
+            [
+              {
+                "qty": 1,
+                "unitPrice": 80
+              }
+            ]
+          ],
+          "outcome": {
+            "args": [
+              null,
+              {
+                "number": "INV-2023-1001",
+                "customer": "Di",
+                "subtotal": 80,
+                "discount": 20,
+                "tax": 4.35,
+                "total": 64.35,
+                "ref": "R601103"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c01",
+      "label": "one thousand two hundred dollars",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123450
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234.50"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c02",
+      "label": "one dollar",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-01"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c03",
+      "label": "negative zero",
+      "moduleFile": "billing.js",
+      "origin": "rule-probe",
+      "round": 0,
+      "ruleRefs": [
+        "BR-02"
+      ],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "-0"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c04",
+      "label": "sub-cent negative amount",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.4
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c05",
+      "label": "over a million dollars",
+      "moduleFile": "billing.js",
+      "origin": "partition",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456789
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234,567.89"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c01",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c06",
+      "label": "one thousand two hundred dollars / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123449
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234.49"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c01",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c07",
+      "label": "one thousand two hundred dollars / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123451
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234.51"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c02",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c08",
+      "label": "one dollar / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.99"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c02",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c09",
+      "label": "one dollar / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c04",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c10",
+      "label": "sub-cent negative amount / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.41
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c04",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c11",
+      "label": "sub-cent negative amount / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.39
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c05",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c12",
+      "label": "over a million dollars / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456788
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234,567.88"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c05",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c13",
+      "label": "over a million dollars / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            123456790
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1,234,567.90"
+          }
+        }
+      ],
+      "style": "sync"
+    }
+  ],
+  "limits": {
+    "maxArgs": 8,
+    "maxCasesPerFunction": 40,
+    "maxDepth": 5,
+    "maxExpansionsPerCase": 4,
+    "maxExpansionsPerFunction": 12,
+    "maxSteps": 5
+  },
+  "loadErrors": [],
+  "schemaVersion": 1,
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  },
+  "world": {
+    "clockNow": 1700000000000,
+    "seed": 42,
+    "tz": "UTC"
+  }
+}

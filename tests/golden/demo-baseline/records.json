@@ -1,0 +1,6928 @@
+{
+  "cases": [
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1700000000000
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c18",
+      "label": "arg 1 = 99 (magic number 100 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 99
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c19",
+      "label": "arg 1 = 101 (magic number 100 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 101
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c20",
+      "label": "arg 1 = 0.5 (magic number)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c21",
+      "label": "arg 1 = 0.49 (magic number 0.5 - 0.01)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.49
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.49
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c22",
+      "label": "arg 1 = 0.51 (magic number 0.5 + 0.01)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.51
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.51
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c03",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c23",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c04",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c24",
+      "label": "arg 1 = 2 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 3
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c06",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c25",
+      "label": "arg 1 = -0.5 / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.51
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.51
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c06",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c26",
+      "label": "arg 1 = -0.5 / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.49
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.49
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c18",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c27",
+      "label": "arg 1 = 99 (magic number 100 - 1) / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            98
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 98
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c19",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c28",
+      "label": "arg 1 = 101 (magic number 100 + 1) / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            102
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 102
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c21",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c29",
+      "label": "arg 1 = 0.49 (magic number 0.5 - 0.01) / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.48
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.48
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#roundMoney#c22",
+      "exportName": "roundMoney",
+      "functionId": "billing.js#roundMoney",
+      "id": "billing.js#roundMoney#c30",
+      "label": "arg 1 = 0.51 (magic number 0.5 + 0.01) / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0.52
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0.52
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 100
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -0.5
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": ""
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "x"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": true
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": false
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": null
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "undefined"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": []
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": [
+              {}
+            ]
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {}
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": {
+              "$t": "NaN"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c34",
+      "label": "arg 1 = 99 (magic number 100 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 99
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c35",
+      "label": "arg 1 = 101 (magic number 100 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 101
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c36",
+      "label": "arg 2 = 99 (magic number 100 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c37",
+      "label": "arg 2 = 101 (magic number 100 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 0
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c02",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c38",
+      "label": "arg 1 = 1 / arg 2 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c02",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c39",
+      "label": "arg 1 = 1 / arg 2 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": 1
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#applyDiscount#c03",
+      "exportName": "applyDiscount",
+      "functionId": "billing.js#applyDiscount",
+      "id": "billing.js#applyDiscount#c40",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2,
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": -2
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "",
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x",
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'getDate')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'getDate')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [],
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ],
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {},
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "end.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c34",
+      "label": "arg 3 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            0
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c35",
+      "label": "arg 3 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c36",
+      "label": "arg 3 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            -1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c37",
+      "label": "arg 3 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            2
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c38",
+      "label": "arg 3 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            100
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c39",
+      "label": "arg 3 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "prorate",
+      "functionId": "billing.js#prorate",
+      "id": "billing.js#prorate#c40",
+      "label": "arg 3 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            ""
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "startDate.getDate is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "",
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x",
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'getTime')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'getTime')"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [],
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ],
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {},
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "dueDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            },
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c34",
+      "label": "arg 3 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            0
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c35",
+      "label": "arg 3 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c36",
+      "label": "arg 3 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            -1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c37",
+      "label": "arg 3 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            2
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c38",
+      "label": "arg 3 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            100
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c39",
+      "label": "arg 3 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "lateFee",
+      "functionId": "billing.js#lateFee",
+      "id": "billing.js#lateFee#c40",
+      "label": "arg 3 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1,
+            ""
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "paidDate.getTime is not a function"
+            }
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-1-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "2-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "100-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.5-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "x-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "true-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "[object Object]-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "[object Object]-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "Tue Nov 14 2023 22:13:20 GMT+0000 (Coordinated Universal Time)-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c18",
+      "label": "sequence of 3 calls",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1001"
+          }
+        },
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1002"
+          }
+        },
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "INV-2023-1003"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c03",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c19",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-2-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c04",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c20",
+      "label": "arg 1 = 2 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "3-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c05",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c21",
+      "label": "arg 1 = 100 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "99-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c05",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c22",
+      "label": "arg 1 = 100 / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "101-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c06",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c23",
+      "label": "arg 1 = -0.5 / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.51
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.51-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#nextInvoiceNumber#c06",
+      "exportName": "nextInvoiceNumber",
+      "functionId": "billing.js#nextInvoiceNumber",
+      "id": "billing.js#nextInvoiceNumber#c24",
+      "label": "arg 1 = -0.5 / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.49
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.49-2023-1001"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "",
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x",
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of null (reading 'code')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'code')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [],
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ],
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {},
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            },
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c18",
+      "label": "arg 2 = 0",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c19",
+      "label": "arg 2 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c20",
+      "label": "arg 2 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            2
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c21",
+      "label": "arg 2 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            100
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c22",
+      "label": "arg 2 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            -0.5
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c23",
+      "label": "arg 2 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            ""
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c24",
+      "label": "arg 2 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            "x"
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c25",
+      "label": "arg 2 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            true
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c26",
+      "label": "arg 2 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            false
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c27",
+      "label": "arg 2 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            null
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c28",
+      "label": "arg 2 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c29",
+      "label": "arg 2 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            []
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c30",
+      "label": "arg 2 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c31",
+      "label": "arg 2 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {}
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c32",
+      "label": "arg 2 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c33",
+      "label": "arg 2 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c34",
+      "label": "arg 1 = 1000000 (magic number)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1000000,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c35",
+      "label": "arg 1 = 999999 (magic number 1000000 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            999999,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c36",
+      "label": "arg 1 = 1000001 (magic number 1000000 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1000001,
+            1
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c37",
+      "label": "arg 2 = 1000000 (magic number)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1000000
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c38",
+      "label": "arg 2 = 999999 (magic number 1000000 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            999999
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c39",
+      "label": "arg 2 = 1000001 (magic number 1000000 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0,
+            1000001
+          ],
+          "outcome": {
+            "kind": "threw",
+            "value": {
+              "$t": "Error",
+              "name": "TypeError",
+              "message": "Cannot read properties of undefined (reading 'toString')"
+            }
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#calculateInvoice#c02",
+      "exportName": "calculateInvoice",
+      "functionId": "billing.js#calculateInvoice",
+      "id": "billing.js#calculateInvoice#c40",
+      "label": "arg 1 = 1 / arg 2 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1,
+            0
+          ],
+          "outcome": {
+            "args": [
+              {
+                "$t": "Error",
+                "name": "Error",
+                "message": "no lines"
+              }
+            ],
+            "kind": "callback"
+          }
+        }
+      ],
+      "style": "callback"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c01",
+      "label": "base vector",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            0
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c02",
+      "label": "arg 1 = 1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c03",
+      "label": "arg 1 = -1",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -1
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c04",
+      "label": "arg 1 = 2",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.02"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c05",
+      "label": "arg 1 = 100",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            100
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c06",
+      "label": "arg 1 = -0.5",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.5
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c07",
+      "label": "arg 1 = empty string",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            ""
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c08",
+      "label": "arg 1 = \"x\"",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            "x"
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "NaN"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c09",
+      "label": "arg 1 = true",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            true
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c10",
+      "label": "arg 1 = false",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            false
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c11",
+      "label": "arg 1 = null",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            null
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c12",
+      "label": "arg 1 = undefined",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "undefined"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "NaN"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c13",
+      "label": "arg 1 = empty array",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            []
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c14",
+      "label": "arg 1 = array of one empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            [
+              {}
+            ]
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "NaN"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c15",
+      "label": "arg 1 = empty object",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {}
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "NaN"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c16",
+      "label": "arg 1 = the frozen clock date",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "Date",
+              "v": "2023-11-14T22:13:20.000Z"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "17,000,000,000.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c17",
+      "label": "arg 1 = NaN",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            {
+              "$t": "NaN"
+            }
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "NaN"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c18",
+      "label": "arg 1 = 99 (magic number 100 - 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            99
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.99"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c19",
+      "label": "arg 1 = 101 (magic number 100 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            101
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c20",
+      "label": "arg 1 = 3 (magic number 2 + 1)",
+      "moduleFile": "billing.js",
+      "origin": "baseline",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            3
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.03"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c03",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c21",
+      "label": "arg 1 = -1 / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -2
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.02"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c06",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c22",
+      "label": "arg 1 = -0.5 / arg 1 -0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.51
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.01"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c06",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c23",
+      "label": "arg 1 = -0.5 / arg 1 +0.01",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            -0.49
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "-0.00"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c18",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c24",
+      "label": "arg 1 = 99 (magic number 100 - 1) / arg 1 -1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            98
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.98"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c19",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c25",
+      "label": "arg 1 = 101 (magic number 100 + 1) / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            102
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "1.02"
+          }
+        }
+      ],
+      "style": "sync"
+    },
+    {
+      "consoleLines": 0,
+      "determinism": "stable",
+      "expandsCase": "billing.js#formatMoney#c20",
+      "exportName": "formatMoney",
+      "functionId": "billing.js#formatMoney",
+      "id": "billing.js#formatMoney#c26",
+      "label": "arg 1 = 3 (magic number 2 + 1) / arg 1 +1",
+      "moduleFile": "billing.js",
+      "origin": "boundary-expansion",
+      "round": 0,
+      "ruleRefs": [],
+      "stateAfter": null,
+      "steps": [
+        {
+          "args": [
+            4
+          ],
+          "outcome": {
+            "kind": "returned",
+            "value": "0.04"
+          }
+        }
+      ],
+      "style": "sync"
+    }
+  ],
+  "limits": {
+    "maxArgs": 8,
+    "maxCasesPerFunction": 40,
+    "maxDepth": 5,
+    "maxExpansionsPerCase": 4,
+    "maxExpansionsPerFunction": 12,
+    "maxSteps": 5
+  },
+  "loadErrors": [],
+  "schemaVersion": 1,
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  },
+  "world": {
+    "clockNow": 1700000000000,
+    "seed": 42,
+    "tz": "UTC"
+  }
+}

@@ -1,0 +1,4737 @@
+{
+  "functions": [
+    {
+      "functionId": "billing.js#roundMoney",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 99 (magic number 100 - 1)",
+            "steps": [
+              {
+                "args": [
+                  99
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 101 (magic number 100 + 1)",
+            "steps": [
+              {
+                "args": [
+                  101
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.5 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.49 (magic number 0.5 - 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0.49
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.51 (magic number 0.5 + 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0.51
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  "",
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x",
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  [],
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ],
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {},
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  100,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 99 (magic number 100 - 1)",
+            "steps": [
+              {
+                "args": [
+                  99,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 101 (magic number 100 + 1)",
+            "steps": [
+              {
+                "args": [
+                  101,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 100 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 99 (magic number 100 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  99
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 101 (magic number 100 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  101
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  "",
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x",
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  [],
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ],
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {},
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  2,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  100,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -0.5,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "",
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "x",
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  true,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  false,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  null,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "undefined"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [],
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [
+                    {}
+                  ],
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {},
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "NaN"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 31 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  31,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 30 (magic number 31 - 1)",
+            "steps": [
+              {
+                "args": [
+                  30,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 32 (magic number 31 + 1)",
+            "steps": [
+              {
+                "args": [
+                  32,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 30 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  30,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 29 (magic number 30 - 1)",
+            "steps": [
+              {
+                "args": [
+                  29,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 31 (magic number 30 + 1)",
+            "steps": [
+              {
+                "args": [
+                  31,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  86400000,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  86399999,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  86400001,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 31 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  31,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 30 (magic number 31 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  30,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 32 (magic number 31 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  32,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 30 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  30,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 29 (magic number 30 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  29,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 31 (magic number 30 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  31,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86400000,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86399999,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86400001,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 31 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  31
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 30 (magic number 31 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  30
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 32 (magic number 31 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  32
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 30 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  30
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 29 (magic number 30 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  29
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 31 (magic number 30 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  31
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86400000
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86399999
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86400001
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock - 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-14T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock - 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-13T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock + 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-15T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock + 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-15T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = frozen clock - 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = frozen clock - 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-13T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = frozen clock + 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-15T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = frozen clock + 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-15T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  "",
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x",
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  [],
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ],
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {},
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  2,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  100,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -0.5,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "",
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "x",
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  true,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  false,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  null,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "undefined"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [],
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [
+                    {}
+                  ],
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {},
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "NaN"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  86400000,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  86399999,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  86400001,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 7 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  7,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 6 (magic number 7 - 1)",
+            "steps": [
+              {
+                "args": [
+                  6,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 8 (magic number 7 + 1)",
+            "steps": [
+              {
+                "args": [
+                  8,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 3 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  3,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2 (magic number 3 - 1)",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 4 (magic number 3 + 1)",
+            "steps": [
+              {
+                "args": [
+                  4,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.015 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0.015,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.005 (magic number 0.015 - 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0.005,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0.025 (magic number 0.015 + 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0.025,
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86400000,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86399999,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  86400001,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 7 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  7,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 6 (magic number 7 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  6,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 8 (magic number 7 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  8,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 3 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  3,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 2 (magic number 3 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  2,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 4 (magic number 3 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  4,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0.015 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0.015,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0.005 (magic number 0.015 - 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0.005,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0.025 (magic number 0.015 + 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0.025,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86400000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86400000
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86399999 (magic number 86400000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86399999
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 86400001 (magic number 86400000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  86400001
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 7 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 6 (magic number 7 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 8 (magic number 7 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 3 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 2 (magic number 3 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 4 (magic number 3 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 0.015 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  0.015
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 0.005 (magic number 0.015 - 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  0.005
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 3 = 0.025 (magic number 0.015 + 0.01)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1,
+                  0.025
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = frozen clock - 31 days",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-14T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = frozen clock - 1 day",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-13T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = frozen clock + 1 day",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-15T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = frozen clock + 31 days",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-15T22:13:20.000Z"
+                  },
+                  1,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock - 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-10-14T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock - 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-13T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock + 1 day",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-15T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = frozen clock + 31 days",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-12-15T22:13:20.000Z"
+                  },
+                  "x"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#nextInvoiceNumber",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "sequence of 3 calls",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              },
+              {
+                "args": [
+                  0
+                ]
+              },
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#calculateInvoice",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  "",
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x",
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  [],
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ],
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {},
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 0",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -1",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 2",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 100",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty string",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = true",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = false",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = null",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = undefined",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty array",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = empty object",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = NaN",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1000000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  1000000,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 999999 (magic number 1000000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  999999,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1000001 (magic number 1000000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  1000001,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1000000 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1000000
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 999999 (magic number 1000000 - 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  999999
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 2 = 1000001 (magic number 1000000 + 1)",
+            "steps": [
+              {
+                "args": [
+                  0,
+                  1000001
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "output": {
+        "partitions": [
+          {
+            "label": "base vector",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 0",
+            "steps": [
+              {
+                "args": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1",
+            "steps": [
+              {
+                "args": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -1",
+            "steps": [
+              {
+                "args": [
+                  -1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2",
+            "steps": [
+              {
+                "args": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100",
+            "steps": [
+              {
+                "args": [
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = -0.5",
+            "steps": [
+              {
+                "args": [
+                  -0.5
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty string",
+            "steps": [
+              {
+                "args": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = \"x\"",
+            "steps": [
+              {
+                "args": [
+                  "x"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = true",
+            "steps": [
+              {
+                "args": [
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = false",
+            "steps": [
+              {
+                "args": [
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = null",
+            "steps": [
+              {
+                "args": [
+                  null
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = undefined",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "undefined"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty array",
+            "steps": [
+              {
+                "args": [
+                  []
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = array of one empty object",
+            "steps": [
+              {
+                "args": [
+                  [
+                    {}
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = empty object",
+            "steps": [
+              {
+                "args": [
+                  {}
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = the frozen clock date",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "Date",
+                    "v": "2023-11-14T22:13:20.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = NaN",
+            "steps": [
+              {
+                "args": [
+                  {
+                    "$t": "NaN"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 100 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 99 (magic number 100 - 1)",
+            "steps": [
+              {
+                "args": [
+                  99
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 101 (magic number 100 + 1)",
+            "steps": [
+              {
+                "args": [
+                  101
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 2 (magic number)",
+            "steps": [
+              {
+                "args": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 1 (magic number 2 - 1)",
+            "steps": [
+              {
+                "args": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "label": "arg 1 = 3 (magic number 2 + 1)",
+            "steps": [
+              {
+                "args": [
+                  3
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": []
+      },
+      "usage": {
+        "completionTokens": 0,
+        "promptTokens": 0
+      }
+    }
+  ],
+  "model": "none",
+  "provider": "none",
+  "rejected": [
+    {
+      "functionId": "billing.js#roundMoney",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#roundMoney",
+      "label": "arg 1 = 100 (magic number)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "label": "arg 2 = 1",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "label": "arg 1 = 100 (magic number)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#applyDiscount",
+      "label": "arg 2 = 100 (magic number)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 1",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = \"x\"",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = true",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = false",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = null",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = undefined",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = empty array",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = array of one empty object",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = empty object",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = the frozen clock date",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = NaN",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 31 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 30 (magic number 31 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 32 (magic number 31 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 30 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 29 (magic number 30 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 31 (magic number 30 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 1 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 31 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 30 (magic number 31 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 32 (magic number 31 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 30 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 29 (magic number 30 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 31 (magic number 30 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 31 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 30 (magic number 31 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 32 (magic number 31 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 30 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 29 (magic number 30 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 31 (magic number 30 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = frozen clock - 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = frozen clock - 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = frozen clock + 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 2 = frozen clock + 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = frozen clock - 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = frozen clock - 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = frozen clock + 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#prorate",
+      "label": "arg 3 = frozen clock + 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 1",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = \"x\"",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = true",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = false",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = null",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = undefined",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = empty array",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = array of one empty object",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = empty object",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = the frozen clock date",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = NaN",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 7 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 6 (magic number 7 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 8 (magic number 7 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 3 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 2 (magic number 3 - 1)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 4 (magic number 3 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 0.015 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 0.005 (magic number 0.015 - 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = 0.025 (magic number 0.015 + 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 7 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 6 (magic number 7 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 8 (magic number 7 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 3 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 2 (magic number 3 - 1)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 4 (magic number 3 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 0.015 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 0.005 (magic number 0.015 - 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = 0.025 (magic number 0.015 + 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 86400000 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 86399999 (magic number 86400000 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 86400001 (magic number 86400000 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 7 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 6 (magic number 7 - 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 8 (magic number 7 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 3 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 2 (magic number 3 - 1)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 4 (magic number 3 + 1)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 0.015 (magic number)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 0.005 (magic number 0.015 - 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 3 = 0.025 (magic number 0.015 + 0.01)",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = frozen clock - 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = frozen clock - 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = frozen clock + 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 1 = frozen clock + 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = frozen clock - 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = frozen clock - 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = frozen clock + 1 day",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#lateFee",
+      "label": "arg 2 = frozen clock + 31 days",
+      "origin": "baseline",
+      "reason": "CAP_CASES"
+    },
+    {
+      "functionId": "billing.js#nextInvoiceNumber",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#calculateInvoice",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#calculateInvoice",
+      "label": "arg 2 = 1",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "label": "arg 1 = 0",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "label": "arg 1 = 100 (magic number)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "label": "arg 1 = 2 (magic number)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    },
+    {
+      "functionId": "billing.js#formatMoney",
+      "label": "arg 1 = 1 (magic number 2 - 1)",
+      "origin": "baseline",
+      "reason": "DUPLICATE"
+    }
+  ],
+  "schemaVersion": 1,
+  "targetSha": "sha256:688d8c7a321ae9b65153c2d07967a7b84606e812be0d7d0adbc83e0f6e016ec1",
+  "tool": {
+    "name": "legacy-archaeologist",
+    "version": "0.1.0"
+  }
+}

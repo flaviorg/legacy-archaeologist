@@ -1,0 +1,29 @@
+sequenceDiagram
+  participant D as scripts/demo.ts
+  participant P as pipeline
+  participant L as LLM (fake, scripted)
+  participant C as child (sandboxed)
+  participant V as verify (one child per test file)
+  D->>P: run --target fixtures/legacy-billing --out artifacts/demo-baseline --provider none
+  P->>P: map, 332 baseline inputs from the map, 240 cases recorded twice, mutate round 0 (31.6%), generate (no rules)
+  D->>P: run --target fixtures/legacy-billing --out artifacts/demo (provider fake)
+  P->>P: map.json (7 functions, 4 side-effect kinds, 5 hotspots)
+  P->>L: hypothesize.v1 x 7 (one per function)
+  L-->>P: 17 rules + 35 probes and partitions (proposals only)
+  P->>P: planCases: validate, dedup, boundary-expand, cap (85 cases)
+  P->>C: probe job (85 cases) on fd 3, twice
+  C-->>P: NDJSON outcomes, all 85 stable
+  P->>P: records.json, timings.json
+  P->>C: replay per mutant (133 valid), round 0
+  P->>L: survivor-inputs.v1 x 10 (round 1)
+  L-->>P: 13 extra inputs (proposals only), 11 accepted
+  P->>C: record the 11 extra inputs on ORIGINAL code, twice
+  P->>C: replay survivors only
+  P->>P: mutation.json: 82.0% -> 90.2% (13 survivors left)
+  P->>P: evaluate-rules: 13 consistent, 3 contradicted, 1 unverified
+  P->>P: generate: 96 tests (.mts) + support.mts + SPEC.md + report.json
+  D->>V: verify --against fixtures/refactors/modern (96 of 96 pass)
+  D->>V: verify --against fixtures/refactors/broken (the 5 failures of verify-broken.json)
+  D->>P: run --target fixtures/third-party/bytes --out artifacts/demo-third-party --provider none
+  P->>P: map, baseline inputs, 111 cases recorded twice, mutate round 0 (48.6%), generate (no rules)
+  D-->>D: hero, then summary on stdout, exit 0, progress lines and wall time on stderr

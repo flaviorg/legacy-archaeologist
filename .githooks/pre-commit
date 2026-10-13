@@ -1,0 +1,8 @@
+#!/bin/sh
+# Installed with `npm run setup:hooks` (git config core.hooksPath .githooks). Blocks a commit on a type error, a
+# failing unit test or a key-shaped string. The full suite and the demo run in CI.
+set -e
+cd "$(dirname "$0")/.."
+npm run --silent typecheck
+npm run --silent test:unit
+npm run --silent check:secrets
