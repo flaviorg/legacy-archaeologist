@@ -253,7 +253,7 @@ The second target, `fixtures/third-party/bytes` (`bytes@3.1.2`, MIT, vendored un
 - Six operators, exported functions only; the LLM may propose poor inputs.
 - Characterization is not correctness: the tests pin what the code does, quirks included.
 - The `none` baseline is a floor, not a benchmark; the real-model column is a single run, not a benchmark.
-- Measured on Node 24 on macOS only; CI (Ubuntu) not run yet (the repository is not published). Timings on the author's Mac: `npm test` 110.1 to 110.3 s and `npm run demo` 82.1 to 82.4 s over three runs, one of them in a clean copy (bounds: 180 s and 90 s; 360 s and 180 s on CI).
+- Measured on Node 24. On the author's Mac: `npm test` 110.1 to 110.3 s and `npm run demo` 82.1 to 82.4 s over three runs, one of them in a clean copy. On GitHub Actions (`ubuntu-latest`, first CI run): `npm test` 182.7 s (48.3 s fast suite plus 134.4 s demo tests) and `npm run demo` 104.3 s. Bounds: 180 s and 90 s locally; 360 s and 180 s on CI.
 
 ## More
 
