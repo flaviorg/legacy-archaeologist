@@ -3,8 +3,13 @@
 // `--permission` cannot be combined with `--test` (the runner spawns a process per file), so every file is run
 // directly; `--test-force-exit` ends a passing file whose target leaves a timer running; a file watchdog SIGKILLs a
 // file that never finishes (a synchronous loop is out of reach of node's own test timeout).
+// The child's stdout is a temporary file, not a pipe: node writes to a file synchronously, so the whole TAP stream is on
+// disk when `--test-force-exit` calls `process.exit`, however late this process gets to read it. Through a pipe, what
+// the child had not yet handed to the kernel was dropped at that exit whenever a loaded machine kept the parent from
+// reading in time (delta 106). A file that reports fewer results than it has tests never reads as a pass.
 import { spawn } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, readdirSync, realpathSync, writeFileSync } from "node:fs";
+import { closeSync, existsSync, fstatSync, mkdirSync, mkdtempSync, openSync, readFileSync, readSync, readdirSync, realpathSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { writeJsonText } from "../contracts/stable-json.ts";
@@ -22,11 +27,12 @@ export type VerifyReport = { target: string; files: VerifyFile[] };
 const MODULE_EXTENSIONS = [".js", ".cjs", ".mjs", ".ts", ".mts"] as const;
 const MODULE_NAME_LINE = /^const MODULE_NAME = "(.+)";$/m;
 const STDOUT_CAP = 16 * 1024 * 1024;
+const STDOUT_POLL_MS = 100;
 const STDERR_CAP = 64 * 1024;
 const MAX_MESSAGE = 2000;
 
 type Planned = { name: string; path: string; moduleName: string; plannedTests: number };
-type ChildRun = { code: number | null; stdout: string; stderr: string; timedOut: boolean; durationMs: number };
+type ChildRun = { code: number | null; stdout: string; stderr: string; timedOut: boolean; capped: boolean; durationMs: number };
 
 function plan(testsDir: string, againstReal: string): Planned[] {
   if (!existsSync(testsDir)) throw new LaError("USAGE", `no tests directory at ${testsDir}; pass --tests-dir or run \`run\` first`);
@@ -48,6 +54,18 @@ function plan(testsDir: string, againstReal: string): Planned[] {
   return planned;
 }
 
+// The first STDOUT_CAP bytes of the child's stdout file.
+function readCapped(fd: number): string {
+  const bytes = Buffer.alloc(Math.min(fstatSync(fd).size, STDOUT_CAP));
+  let offset = 0;
+  while (offset < bytes.length) {
+    const n = readSync(fd, bytes, offset, bytes.length - offset, offset);
+    if (n === 0) break;
+    offset += n;
+  }
+  return bytes.subarray(0, offset).toString("utf8");
+}
+
 function runFile(file: string, testsReal: string, againstReal: string, fileTimeoutMs: number): Promise<ChildRun> {
   const args = [
     "--permission",
@@ -62,28 +80,54 @@ function runFile(file: string, testsReal: string, againstReal: string, fileTimeo
   ];
   const env = { TZ: "UTC", LANG: "C", LC_ALL: "C", NODE_OPTIONS: "", PATH: "", LA_TARGET_DIR: againstReal };
   const started = performance.now();
+  // Outside every directory the child may read; the child only inherits the open descriptor as its fd 1.
+  const scratch = mkdtempSync(join(tmpdir(), "la-verify-"));
+  const fd = openSync(join(scratch, "stdout.tap"), "w+");
+  let open = true;
+  const cleanup = (): void => {
+    if (!open) return;
+    open = false;
+    closeSync(fd);
+    rmSync(scratch, { recursive: true, force: true });
+  };
   return new Promise((resolve, reject) => {
-    const child = spawn(process.execPath, args, { cwd: testsReal, env, stdio: ["ignore", "pipe", "pipe"] });
-    let stdout = "";
+    let child: ReturnType<typeof spawn>;
+    try {
+      child = spawn(process.execPath, args, { cwd: testsReal, env, stdio: ["ignore", fd, "pipe"] });
+    } catch (err) {
+      cleanup();
+      throw err;
+    }
     let stderr = "";
     let timedOut = false;
-    child.stdout.setEncoding("utf8").on("data", (chunk: string) => {
-      if (stdout.length < STDOUT_CAP) stdout += chunk;
-    });
-    child.stderr.setEncoding("utf8").on("data", (chunk: string) => {
+    let capped = false;
+    child.stderr?.setEncoding("utf8").on("data", (chunk: string) => {
       if (stderr.length < STDERR_CAP) stderr += chunk;
     });
     const timer = setTimeout(() => {
       timedOut = true;
       child.kill("SIGKILL");
     }, fileTimeoutMs);
+    // The file grows on disk, not in memory: a file whose stdout passes the cap is killed.
+    const poll = setInterval(() => {
+      if (open && !capped && fstatSync(fd).size > STDOUT_CAP) {
+        capped = true;
+        child.kill("SIGKILL");
+      }
+    }, STDOUT_POLL_MS);
     child.on("error", (err) => {
       clearTimeout(timer);
+      clearInterval(poll);
+      cleanup();
       reject(new LaError("CHILD_SPAWN", `could not start the test child: ${err.message}`));
     });
     child.on("close", (code) => {
       clearTimeout(timer);
-      resolve({ code, stdout, stderr, timedOut, durationMs: Math.round(performance.now() - started) });
+      clearInterval(poll);
+      if (!open) return;
+      const stdout = readCapped(fd);
+      cleanup();
+      resolve({ code, stdout, stderr, timedOut, capped, durationMs: Math.round(performance.now() - started) });
     });
   });
 }
@@ -106,11 +150,21 @@ function toVerifyFile(p: Planned, run: ChildRun): VerifyFile {
     const tests = Math.max(p.plannedTests, tap.tests.length);
     return { file, tests, passed, failed: tests - passed, timedOut: true, failures };
   }
+  if (run.capped) {
+    const tests = Math.max(p.plannedTests, tap.tests.length, 1);
+    return { file, tests, passed, failed: tests - passed, timedOut: false, failures: [...failures, { name: file, caseId: null, message: `killed: stdout passed ${STDOUT_CAP / (1024 * 1024)} MiB` }] };
+  }
   if (run.code !== 0 && failures.length === 0) {
     // The file failed outside any test (a syntax error, a crash at load): every planned test counts as failed.
     const tests = Math.max(p.plannedTests, tap.tests.length, 1);
     const firstLine = run.stderr.split("\n").map((l) => l.trim()).find((l) => l !== "") ?? `exited with code ${String(run.code)}`;
     return { file, tests, passed, failed: tests - passed, timedOut: false, failures: [{ name: file, caseId: null, message: cleanMessage(firstLine) }] };
+  }
+  if (tap.tests.length < p.plannedTests) {
+    // The file exited before reporting every test (the target called process.exit, or output was lost): each test
+    // without a result counts as failed, so a short TAP stream never reads as a pass.
+    const tests = p.plannedTests;
+    return { file, tests, passed, failed: tests - passed, timedOut: false, failures: [...failures, { name: file, caseId: null, message: `the file reported ${tap.tests.length} of ${tests} test results before it exited` }] };
   }
   return { file, tests: tap.tests.length, passed, failed: failures.length, timedOut: false, failures };
 }
